@@ -5,7 +5,7 @@ interface MyTextButtonProps extends React.DetailedHTMLProps<
   variant?: "primary";
 }
 
-export default function MyTextButton({
+export function MyTextButton({
   children,
   variant = "primary",
   ...divParams
