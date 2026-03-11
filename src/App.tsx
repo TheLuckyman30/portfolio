@@ -1,8 +1,44 @@
+import { useState, type JSX } from "react";
 import "./App.css";
+import AboutMe from "./pages/about-me/AboutMe";
+import { MyTextButton, Sidebar } from "./components";
+import Projects from "./pages/projects/Projects";
+import Resume from "./pages/resume/Resume";
+import ContactMe from "./pages/contact-me/ContactMe";
+
+interface Page {
+  name: string;
+  element: JSX.Element;
+}
+
+const PAGES: Page[] = [
+  { name: "About Me", element: <AboutMe /> },
+  { name: "Projects", element: <Projects /> },
+  { name: "Resume", element: <Resume /> },
+  { name: "Contact Me", element: <ContactMe /> },
+];
 
 function App() {
+  const [currentPage, setCurrentPage] = useState<Page>(PAGES[0]);
+
   return (
-    <main className="flex-col h-screen w-screen flex justify-center items-center text-xl"></main>
+    <main className="flex justify-center items-center h-screen w-screen bg-gray-200">
+      <section className="bg-white rounded-md shadow-2xl p-5 h-[95%] w-[85%] flex">
+        <Sidebar>
+          {PAGES.map((page) => (
+            <MyTextButton onClick={() => setCurrentPage(page)}>
+              {page.name}
+            </MyTextButton>
+          ))}
+        </Sidebar>
+        <section className="w-full h-full">
+          <div className="w-full text-center text-4xl text-blue-500 font-bold border-b-3 border-b-blue-300">
+            {currentPage.name}
+          </div>
+          <div className="p-2 h-full w-full">{currentPage.element}</div>
+        </section>
+      </section>
+    </main>
   );
 }
 
