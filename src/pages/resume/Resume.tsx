@@ -1,3 +1,3 @@
-export default function Resume() {
+export function Resume() {
   return <div>Resume</div>;
 }

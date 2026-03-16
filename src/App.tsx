@@ -1,10 +1,7 @@
 import { useState, type JSX } from "react";
-import "./App.css";
-import AboutMe from "./pages/about-me/AboutMe";
 import { MyTextButton, Sidebar } from "./components";
-import Projects from "./pages/projects/Projects";
-import Resume from "./pages/resume/Resume";
-import ContactMe from "./pages/contact-me/ContactMe";
+import { AboutMe, ContactMe, Projects, Resume } from "./pages";
+import "./App.css";
 
 interface Page {
   name: string;
