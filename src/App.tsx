@@ -32,7 +32,9 @@ function App() {
           <div className="w-full text-center text-4xl text-blue-500 font-bold border-b-3 border-b-blue-300">
             {currentPage.name}
           </div>
-          <div className="p-2 h-full w-full">{currentPage.element}</div>
+          <div className="p-2 h-full w-full overflow-y-hidden">
+            {currentPage.element}
+          </div>
         </section>
       </section>
     </main>

@@ -1,3 +1,3 @@
 export function CoverflowView() {
-  return <div>Coverflow</div>;
+  return <div className="h-full">Coverflow</div>;
 }

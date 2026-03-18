@@ -1,23 +1,17 @@
 import type { MyProject } from "../../../utils/interfaces";
+import { ProjectCard } from "./ProjectCard";
 
 interface ListViewProps {
   myProjects: MyProject[];
+  setSelectedProject: (newProj: MyProject) => void;
 }
 
-function Card({ project }: { project: MyProject }) {
-  return (
-    <div className="bg-black/10 w-80 h-80 p-2 rounded-md hover:scale-105 duration-75 cursor-pointer">
-      <div className="font-semibold">{project.name}</div>
-    </div>
-  );
-}
-
-export function ListView({ myProjects }: ListViewProps) {
+export function ListView({ myProjects, setSelectedProject }: ListViewProps) {
   return (
     <>
-      <section className="p-2 flex gap-5 flex-wrap h-full overflow-y-scroll">
+      <section className="p-2 flex gap-5 flex-wrap h-full">
         {myProjects.map((proj) => (
-          <Card project={proj} />
+          <ProjectCard project={proj} setSelectedProject={setSelectedProject} />
         ))}
       </section>
     </>
