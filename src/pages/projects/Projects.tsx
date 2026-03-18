@@ -1,4 +1,4 @@
-import { Tab, TabGroup, TabList } from "@headlessui/react";
+import { MyTab, MyTabGroup } from "../../components";
 import type { MyProject } from "../../utils/interfaces";
 import { CoverflowView, ListView } from "./components";
 import { type JSX, useState } from "react";
@@ -20,10 +20,90 @@ const myProjects: MyProject[] = [
     siteLink: "",
     githubLink: "https://github.com/selinAbacaz/CapstoneDyslexease",
   },
+  {
+    name: "Dyslexease",
+    description:
+      "A full-stack web app that allows users to input their documents and quickly make dyslexic friendly modifications.",
+    techUsed: [
+      "Typescript",
+      "React",
+      "NestJs",
+      "Prsima",
+      "Postgres",
+      "Zustand",
+    ],
+    tags: [],
+    siteLink: "",
+    githubLink: "https://github.com/selinAbacaz/CapstoneDyslexease",
+  },
+  {
+    name: "Dyslexease",
+    description:
+      "A full-stack web app that allows users to input their documents and quickly make dyslexic friendly modifications.",
+    techUsed: [
+      "Typescript",
+      "React",
+      "NestJs",
+      "Prsima",
+      "Postgres",
+      "Zustand",
+    ],
+    tags: [],
+    siteLink: "",
+    githubLink: "https://github.com/selinAbacaz/CapstoneDyslexease",
+  },
+  {
+    name: "Dyslexease",
+    description:
+      "A full-stack web app that allows users to input their documents and quickly make dyslexic friendly modifications.",
+    techUsed: [
+      "Typescript",
+      "React",
+      "NestJs",
+      "Prsima",
+      "Postgres",
+      "Zustand",
+    ],
+    tags: [],
+    siteLink: "",
+    githubLink: "https://github.com/selinAbacaz/CapstoneDyslexease",
+  },
+  {
+    name: "Dyslexease",
+    description:
+      "A full-stack web app that allows users to input their documents and quickly make dyslexic friendly modifications.",
+    techUsed: [
+      "Typescript",
+      "React",
+      "NestJs",
+      "Prsima",
+      "Postgres",
+      "Zustand",
+    ],
+    tags: [],
+    siteLink: "",
+    githubLink: "https://github.com/selinAbacaz/CapstoneDyslexease",
+  },
+  {
+    name: "Dyslexease",
+    description:
+      "A full-stack web app that allows users to input their documents and quickly make dyslexic friendly modifications.",
+    techUsed: [
+      "Typescript",
+      "React",
+      "NestJs",
+      "Prsima",
+      "Postgres",
+      "Zustand",
+    ],
+    tags: [],
+    siteLink: "",
+    githubLink: "https://github.com/selinAbacaz/CapstoneDyslexease",
+  },
 ];
 
 const views = [
-  { name: "List", element: <ListView /> },
+  { name: "List", element: <ListView myProjects={myProjects} /> },
   { name: "Gallery", element: <CoverflowView /> },
 ];
 
@@ -35,23 +115,17 @@ export function Projects() {
 
   return (
     <>
-      <section className="flex flex-col h-1/2">
-        <TabGroup
-          onChange={(index) => setSelectedView(views[index].element)}
+      <section className="flex flex-col gap-5 h-1/2">
+        <MyTabGroup
           defaultIndex={defaultIndex}
+          change={(index) => setSelectedView(views[index].element)}
         >
-          <TabList className="flex gap-4 bg-black/15 p-1 shadow-md w-fit rounded-full font-semibold">
-            {views.map((view) => (
-              <Tab
-                key={view.name}
-                className="rounded-full px-2 py-0.5 cursor-pointer data-selected:bg-white data-selected:shadow-md focus-visible:outline-none"
-              >
-                {view.name}
-              </Tab>
-            ))}
-          </TabList>
-        </TabGroup>
-        <div className="flex-1">{selectedView}</div>
+          {views.map((view) => (
+            <MyTab key={view.name}>{view.name}</MyTab>
+          ))}
+        </MyTabGroup>
+
+        <div className="flex-1 max-h-full">{selectedView}</div>
       </section>
       <section className="h-1/2"></section>
     </>
