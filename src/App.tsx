@@ -2,6 +2,7 @@ import { useState, type JSX } from "react";
 import { MyTextButton, Sidebar } from "./components";
 import { AboutMe, ContactMe, Projects, Resume } from "./pages";
 import "./App.css";
+import { ProjPageContextProvider } from "./utils/proj-page-context";
 
 interface Page {
   name: string;
@@ -10,8 +11,18 @@ interface Page {
 
 const PAGES: Page[] = [
   { name: "About Me", element: <AboutMe /> },
-  { name: "Projects", element: <Projects /> },
-  { name: "Resume", element: <Resume /> },
+  {
+    name: "Projects",
+    element: (
+      <ProjPageContextProvider>
+        <Projects />
+      </ProjPageContextProvider>
+    ),
+  },
+  {
+    name: "Resume",
+    element: <Resume />,
+  },
   { name: "Contact Me", element: <ContactMe /> },
 ];
 

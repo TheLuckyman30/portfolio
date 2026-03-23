@@ -1,16 +1,12 @@
-import type { MyProject } from "../../../utils/interfaces";
+import { useProjPageConext } from "../../../utils/proj-page-context";
 import { ProjectCard } from "./ProjectCard";
 
-interface ListViewProps {
-  myProjects: MyProject[];
-  setSelectedProject: (newProj: MyProject) => void;
-}
-
-export function ListView({ myProjects, setSelectedProject }: ListViewProps) {
+export function ListView() {
+  const { allProjects, setSelectedProject } = useProjPageConext();
   return (
     <>
       <section className="p-2 flex gap-5 flex-wrap h-full">
-        {myProjects.map((proj) => (
+        {allProjects.map((proj) => (
           <ProjectCard project={proj} setSelectedProject={setSelectedProject} />
         ))}
       </section>
