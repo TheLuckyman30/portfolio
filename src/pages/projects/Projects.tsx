@@ -1,6 +1,5 @@
 import { MyTab, MyTabGroup } from "../../components";
-import { CoverflowView, ListView } from "./components";
-import { useProjPageConext } from "../../utils/proj-page-context";
+import { CoverflowView, ListView, ProjectInfo } from "./components";
 import { type JSX, useState } from "react";
 
 const views = [
@@ -16,7 +15,6 @@ const views = [
 
 export function Projects() {
   const defaultIndex = 0;
-  const { selectedProject } = useProjPageConext();
   const [selectedView, setSelectedView] = useState<JSX.Element>(
     views[defaultIndex].element,
   );
@@ -35,7 +33,7 @@ export function Projects() {
           </MyTabGroup>
           <div className="flex-1 overflow-y-auto">{selectedView}</div>
         </section>
-        <section className="p-2 flex-1">{selectedProject.description}</section>
+        <ProjectInfo />
       </div>
     </>
   );
