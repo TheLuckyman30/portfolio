@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Dyslexease",
+    "description": "A full-stack web app that allows users to input their documents and quickly make dyslexic friendly modifications.",
+    "techUsed": [
+      "Typescript",
+      "React",
+      "NestJs",
+      "Prisma",
+      "Postgres",
+      "Zustand"
+    ],
+    "tags": [],
+    "siteLink": "",
+    "githubLink": "https://github.com/selinAbacaz/CapstoneDyslexease"
+  },
+  {
+    "name": "Premier League Simulator",
+    "description": "A web app that simulates an entire Premier League season, generating match results, league tables, and team statistics.",
+    "techUsed": ["Typescript", "React", "Vite", "CSS"],
+    "tags": ["Simulation", "Sports"],
+    "siteLink": "",
+    "githubLink": ""
+  },
+  {
+    "name": "Campus Event Bot",
+    "description": "A Discord bot that manages campus events, sends reminders, and allows users to export schedules as calendar files.",
+    "techUsed": ["Typescript", "Node.js", "Discord.js"],
+    "tags": ["Bot", "Automation"],
+    "siteLink": "",
+    "githubLink": ""
+  },
+  {
+    "name": "Career Quiz Platform",
+    "description": "An interactive quiz platform that helps users discover potential career paths based on their interests and skills.",
+    "techUsed": ["React", "Typescript", "Firebase"],
+    "tags": ["Education", "Quiz"],
+    "siteLink": "",
+    "githubLink": ""
+  },
+  {
+    "name": "Stellaris Mod Manager",
+    "description": "A tool for managing and customizing Stellaris mods, including load order optimization and compatibility checks.",
+    "techUsed": ["Typescript", "Electron", "Node.js"],
+    "tags": ["Gaming", "Tooling"],
+    "siteLink": "",
+    "githubLink": ""
+  },
+  {
+    "name": "Schedule Planner",
+    "description": "A web-based planner that allows users to organize schedules, visualize timelines, and manage daily tasks efficiently.",
+    "techUsed": ["React", "Typescript", "Zustand"],
+    "tags": ["Productivity"],
+    "siteLink": "",
+    "githubLink": ""
+  }
+]

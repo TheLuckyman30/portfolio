@@ -1,3 +1,3 @@
-export default function ContactMe() {
+export function ContactMe() {
   return <div>Contact Me</div>;
 }

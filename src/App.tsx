@@ -1,10 +1,8 @@
 import { useState, type JSX } from "react";
-import "./App.css";
-import AboutMe from "./pages/about-me/AboutMe";
 import { MyTextButton, Sidebar } from "./components";
-import Projects from "./pages/projects/Projects";
-import Resume from "./pages/resume/Resume";
-import ContactMe from "./pages/contact-me/ContactMe";
+import { AboutMe, ContactMe, Projects, Resume } from "./pages";
+import "./App.css";
+import { ProjPageContextProvider } from "./utils/proj-page-context";
 
 interface Page {
   name: string;
@@ -13,8 +11,18 @@ interface Page {
 
 const PAGES: Page[] = [
   { name: "About Me", element: <AboutMe /> },
-  { name: "Projects", element: <Projects /> },
-  { name: "Resume", element: <Resume /> },
+  {
+    name: "Projects",
+    element: (
+      <ProjPageContextProvider>
+        <Projects />
+      </ProjPageContextProvider>
+    ),
+  },
+  {
+    name: "Resume",
+    element: <Resume />,
+  },
   { name: "Contact Me", element: <ContactMe /> },
 ];
 
@@ -31,11 +39,13 @@ function App() {
             </MyTextButton>
           ))}
         </Sidebar>
-        <section className="w-full h-full">
+        <section className="flex flex-col w-full h-full">
           <div className="w-full text-center text-4xl text-blue-500 font-bold border-b-3 border-b-blue-300">
             {currentPage.name}
           </div>
-          <div className="p-2 h-full w-full">{currentPage.element}</div>
+          <div className="p-2 h-full w-full overflow-y-hidden">
+            {currentPage.element}
+          </div>
         </section>
       </section>
     </main>
