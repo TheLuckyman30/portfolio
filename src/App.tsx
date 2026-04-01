@@ -1,6 +1,6 @@
 import { useState, type JSX } from "react";
 import { MyTextButton, Sidebar } from "./components";
-import { AboutMe, ContactMe, Projects, Resume } from "./pages";
+import { AboutMe, Projects } from "./pages";
 import "./App.css";
 import { ProjPageContextProvider } from "./utils/proj-page-context";
 
@@ -19,11 +19,6 @@ const PAGES: Page[] = [
       </ProjPageContextProvider>
     ),
   },
-  {
-    name: "Resume",
-    element: <Resume />,
-  },
-  { name: "Contact Me", element: <ContactMe /> },
 ];
 
 function App() {
