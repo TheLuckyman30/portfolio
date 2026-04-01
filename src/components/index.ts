@@ -3,3 +3,6 @@ export { MyTextButton } from "./MyTextButon";
 export { Sidebar } from "./Sidebar";
 export { MyTabGroup } from "./MyTabGroup";
 export { MyTab } from "./MyTab";
+export { ContactMe } from "./ContactMe";
+export { Input } from "./Input";
+export { Backdrop } from "./Backdrop";
