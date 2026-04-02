@@ -1,5 +1,5 @@
 import { useState, type JSX } from "react";
-import { MyTextButton, Sidebar } from "./components";
+import { ContactMe, MyTextButton, Sidebar } from "./components";
 import { AboutMe, Projects } from "./pages";
 import "./App.css";
 import { ProjPageContextProvider } from "./utils/proj-page-context";
@@ -43,6 +43,7 @@ function App() {
           </div>
         </section>
       </section>
+      <ContactMe />
     </main>
   );
 }
