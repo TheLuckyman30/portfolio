@@ -1,6 +1,6 @@
 import { useState, type JSX } from "react";
 import { ContactMe, MyButton, MyTextButton, Sidebar } from "./components";
-import { AboutMe, Projects } from "./pages";
+import { AboutMe, Page, Projects } from "./pages";
 import "./App.css";
 import { ProjPageContextProvider } from "./utils/proj-page-context";
 
@@ -30,7 +30,6 @@ const pages: Page[] = [
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>(pages[0]);
   const [showContactForm, setShowContactForm] = useState<boolean>(false);
-
   const modals: Modal[] = [
     {
       name: "Contact Me",
@@ -56,14 +55,7 @@ function App() {
             </MyButton>
           ))}
         </Sidebar>
-        <section className="flex flex-col w-full h-full">
-          <div className="w-full text-center text-4xl text-blue-500 font-bold border-b-3 border-b-blue-300">
-            {currentPage.name}
-          </div>
-          <div className="p-2 h-full w-full overflow-y-hidden">
-            {currentPage.element}
-          </div>
-        </section>
+        <Page pageName={currentPage.name} pageElement={currentPage.element} />
       </section>
       {modals.map((modal) => modal.element)}
     </main>
