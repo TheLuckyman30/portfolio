@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Backdrop, Input } from "./";
+import { Backdrop, Input, MyButton } from "./";
 import { Textarea } from "./Textarea";
 
 interface ContactMeProps {
@@ -12,6 +12,8 @@ export function ContactMe({ show, setShow }: ContactMeProps) {
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
   const [text, setText] = useState<string>("");
+
+  function sendMessage() {}
 
   return (
     <div className={`${show ? "" : "hidden"}`}>
@@ -46,6 +48,7 @@ export function ContactMe({ show, setShow }: ContactMeProps) {
             onChange={(e) => setText(e.target.value)}
             placeholder="Text"
           />
+          <MyButton>Send Message</MyButton>
         </div>
       </Backdrop>
     </div>

@@ -15,7 +15,7 @@ export function MyButton({
   return (
     <button
       {...buttonParams}
-      className={`cursor-pointer font-medium p-1.5 rounded-md hover:scale-105 duration-75 ${colorClasses[variant]}`}
+      className={`cursor-pointer font-medium p-1.5 rounded-md hover:scale-105 duration-75 w-fit ${colorClasses[variant]}`}
     >
       {children}
     </button>
