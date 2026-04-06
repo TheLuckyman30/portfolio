@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Backdrop, Input, MyButton } from "./";
-import { Textarea } from "./Textarea";
+import { Backdrop, Input, MyButton, Textarea } from "./";
 
 interface ContactMeProps {
   show: boolean;
