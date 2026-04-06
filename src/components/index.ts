@@ -7,3 +7,4 @@ export { ContactMe } from "./ContactMe";
 export { Input } from "./Input";
 export { Backdrop } from "./Backdrop";
 export { Textarea } from "./Textarea";
+export { Resume } from "./Resume";
