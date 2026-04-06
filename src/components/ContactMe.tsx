@@ -13,43 +13,61 @@ export function ContactMe({ show, setShow }: ContactMeProps) {
   const [subject, setSubject] = useState<string>("");
   const [text, setText] = useState<string>("");
 
-  function sendMessage() {}
+  function sendMessage(e: React.SubmitEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setName("");
+    setEmail("");
+    setSubject("");
+    setText("");
+  }
 
   return (
     <div className={`${show ? "" : "hidden"}`}>
       <Backdrop>
-        <div className="flex flex-col gap-5 bg-gray-200 min-w-fit w-100 p-2 rounded-md shadow-md">
-          <div className="flex w-full justify-between">
-            <div className="font-bold text-2xl">Contact Me</div>
-            <button
-              className="text-xl text-slate-700 cursor-pointer"
-              onClick={() => setShow(false)}
+        <form onSubmit={(e) => sendMessage(e)}>
+          <div className="flex flex-col gap-5 bg-gray-200 min-w-fit w-100 p-2 rounded-md shadow-md">
+            <div className="flex w-full justify-between">
+              <div className="font-bold text-2xl">Contact Me</div>
+              <button
+                type="button"
+                className="text-xl text-slate-700 cursor-pointer"
+                onClick={() => setShow(false)}
+              >
+                X
+              </button>
+            </div>
+            <Input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Name"
+              required
+            />
+            <Input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+              required
+            />
+            <Input
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              placeholder="Subject"
+              required
+            />
+            <Textarea
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              placeholder="Text"
+              required
+            />
+            <MyButton
+              type="submit"
+              disabled={!name || !email || !subject || !text}
             >
-              X
-            </button>
+              Send Message
+            </MyButton>
           </div>
-          <Input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Name"
-          />
-          <Input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-          />
-          <Input
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            placeholder="Subject"
-          />
-          <Textarea
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            placeholder="Text"
-          />
-          <MyButton>Send Message</MyButton>
-        </div>
+        </form>
       </Backdrop>
     </div>
   );
