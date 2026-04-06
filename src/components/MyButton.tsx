@@ -10,12 +10,14 @@ export function MyButton({
   variant = "primary",
   ...buttonParams
 }: MyButtonProps) {
-  const colorClasses = { primary: "bg-blue-500 text-white" };
+  const colorClasses = {
+    primary: "bg-blue-500 text-white disabled:bg-gray-400",
+  };
 
   return (
     <button
       {...buttonParams}
-      className={`cursor-pointer font-medium p-1.5 rounded-md hover:scale-105 duration-75 ${colorClasses[variant]}`}
+      className={`not-disabled:cursor-pointer font-medium p-1.5 rounded-md not-disabled:hover:scale-105 duration-75 w-fit ${colorClasses[variant]}`}
     >
       {children}
     </button>

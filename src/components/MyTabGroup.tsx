@@ -23,6 +23,11 @@ export function MyTabGroup({
   ...divParams
 }: MyTabGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState<number>(defaultIndex);
+  useEffect(() => {
+    if (!change) return;
+
+    change(selectedIndex);
+  }, [selectedIndex, change]);
 
   const colorClasses = {
     primary: " bg-black/15 ",
@@ -43,10 +48,6 @@ export function MyTabGroup({
       });
     }
   });
-
-  if (change !== undefined) {
-    useEffect(() => change(selectedIndex), [selectedIndex]);
-  }
 
   return (
     <div

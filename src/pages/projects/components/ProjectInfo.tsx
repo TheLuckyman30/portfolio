@@ -13,12 +13,14 @@ export function ProjectInfo() {
         {selectedProject.name}
       </h1>
       <table>
-        {test.map((t) => (
-          <tr>
-            <td className="w-40 pb-10 font-semibold">{t.label}:</td>
-            <td className="pb-10">{t.value}</td>
-          </tr>
-        ))}
+        <tbody>
+          {test.map((t) => (
+            <tr>
+              <td className="w-40 pb-10 font-semibold">{t.label}:</td>
+              <td className="pb-10">{t.value}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </section>
   );
