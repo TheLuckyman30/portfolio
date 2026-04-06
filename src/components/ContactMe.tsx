@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Backdrop, Input, MyButton } from "./";
 import { Textarea } from "./Textarea";
 
@@ -13,6 +13,26 @@ export function ContactMe({ show, setShow }: ContactMeProps) {
   const [subject, setSubject] = useState<string>("");
   const [text, setText] = useState<string>("");
 
+  const formRef = useRef<HTMLFormElement>(null);
+  useEffect(() => {
+    if (!show) return;
+
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        formRef.current &&
+        event.target instanceof Node &&
+        !formRef.current.contains(event.target)
+      ) {
+        setShow(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [formRef, show]);
+
   function sendMessage(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     setName("");
@@ -24,7 +44,7 @@ export function ContactMe({ show, setShow }: ContactMeProps) {
   return (
     <div className={`${show ? "" : "hidden"}`}>
       <Backdrop>
-        <form onSubmit={(e) => sendMessage(e)}>
+        <form ref={formRef} onSubmit={(e) => sendMessage(e)}>
           <div className="flex flex-col gap-5 bg-gray-200 min-w-fit w-100 p-2 rounded-md shadow-md">
             <div className="flex w-full justify-between">
               <div className="font-bold text-2xl">Contact Me</div>
