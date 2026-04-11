@@ -1,4 +1,9 @@
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
+import { Document, Page } from "react-pdf";
 import { Backdrop } from "./";
+import { pdfjs } from "react-pdf";
+import resume from "../assets/files/Resume.pdf";
 
 interface ResumeProps {
   show: boolean;
@@ -6,6 +11,11 @@ interface ResumeProps {
 }
 
 export function Resume({ show, setShow }: ResumeProps) {
+  pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    "pdfjs-dist/build/pdf.worker.min.mjs",
+    import.meta.url,
+  ).toString();
+
   return (
     <div className={`${show ? "" : "hidden"}`}>
       <Backdrop>
@@ -18,6 +28,11 @@ export function Resume({ show, setShow }: ResumeProps) {
             >
               X
             </button>
+          </div>
+          <div className="rounded-md overflow-hidden">
+            <Document file={resume}>
+              <Page pageNumber={1} />
+            </Document>
           </div>
         </div>
       </Backdrop>
