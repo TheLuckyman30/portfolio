@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Backdrop, Input, MyButton, Textarea } from "./";
+import { useClickOutsie } from "../utils/click-outside-handler";
 
 interface ContactMeProps {
   show: boolean;
@@ -11,26 +12,8 @@ export function ContactMe({ show, setShow }: ContactMeProps) {
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
   const [text, setText] = useState<string>("");
-
   const formRef = useRef<HTMLFormElement>(null);
-  useEffect(() => {
-    if (!show) return;
-
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        formRef.current &&
-        event.target instanceof Node &&
-        !formRef.current.contains(event.target)
-      ) {
-        setShow(false);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [formRef, show]);
+  useClickOutsie(formRef, show, setShow);
 
   function sendMessage(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -59,9 +42,9 @@ export function ContactMe({ show, setShow }: ContactMeProps) {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="text-slate-500 hover:text-slate-700 duration-75"
                 >
                   <circle cx="12" cy="12" r="10" />

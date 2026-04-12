@@ -4,6 +4,8 @@ import { Document, Page } from "react-pdf";
 import { Backdrop } from "./";
 import { pdfjs } from "react-pdf";
 import resume from "../assets/files/Resume.pdf";
+import { useRef } from "react";
+import { useClickOutsie } from "../utils/click-outside-handler";
 
 interface ResumeProps {
   show: boolean;
@@ -16,10 +18,16 @@ export function Resume({ show, setShow }: ResumeProps) {
     import.meta.url,
   ).toString();
 
+  const divRef = useRef<HTMLDivElement | null>(null);
+  useClickOutsie(divRef, show, setShow);
+
   return (
     <div className={`${show ? "" : "hidden"}`}>
       <Backdrop>
-        <div className="flex flex-col gap-5 bg-gray-200 min-w-fit w-100 p-2 rounded-md shadow-md">
+        <div
+          ref={divRef}
+          className="flex flex-col gap-5 bg-gray-200 min-w-fit w-100 p-2 rounded-md shadow-md"
+        >
           <div className="flex w-full justify-between">
             <div className="font-bold text-2xl">Resume</div>
             <button
@@ -33,9 +41,9 @@ export function Resume({ show, setShow }: ResumeProps) {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="text-slate-500 hover:text-slate-700 duration-75"
               >
                 <circle cx="12" cy="12" r="10" />
@@ -53,9 +61,9 @@ export function Resume({ show, setShow }: ResumeProps) {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M12 15V3" />
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
