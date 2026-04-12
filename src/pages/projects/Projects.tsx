@@ -1,4 +1,4 @@
-import { MyTab, MyTabGroup } from "../../components";
+import { Tab, TabGroup } from "../../components";
 import { CoverflowView, ListView, ProjectInfo } from "./components";
 import { type JSX, useState } from "react";
 
@@ -23,14 +23,14 @@ export function Projects() {
     <>
       <div className="flex flex-col h-full">
         <section className="flex flex-col gap-5 h-1/2">
-          <MyTabGroup
+          <TabGroup
             defaultIndex={defaultIndex}
             change={(index) => setSelectedView(views[index].element)}
           >
             {views.map((view) => (
-              <MyTab key={view.name}>{view.name}</MyTab>
+              <Tab key={view.name}>{view.name}</Tab>
             ))}
-          </MyTabGroup>
+          </TabGroup>
           <div className="flex-1 overflow-y-auto">{selectedView}</div>
         </section>
         <ProjectInfo />

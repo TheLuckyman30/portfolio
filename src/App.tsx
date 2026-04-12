@@ -1,6 +1,6 @@
 import { useState, type JSX } from "react";
-import { ContactMe, MyButton, MyTextButton, Sidebar } from "./components";
-import { AboutMe, Page, Projects } from "./pages";
+import { ContactMe, Button, TextButton, Resume, Sidebar } from "./components";
+import { AboutMe, PageOutline, Projects } from "./pages";
 import "./App.css";
 import { ProjPageContextProvider } from "./utils/proj-page-context";
 
@@ -30,6 +30,7 @@ const pages: Page[] = [
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>(pages[0]);
   const [showContactForm, setShowContactForm] = useState<boolean>(false);
+  const [showResume, setShowResume] = useState<boolean>(false);
   const modals: Modal[] = [
     {
       name: "Contact Me",
@@ -38,6 +39,11 @@ function App() {
       ),
       setShow: setShowContactForm,
     },
+    {
+      name: "Resume",
+      element: <Resume show={showResume} setShow={setShowResume} />,
+      setShow: setShowResume,
+    },
   ];
 
   return (
@@ -45,17 +51,18 @@ function App() {
       <section className="bg-white rounded-md shadow-2xl p-5 h-[95%] w-[85%] flex">
         <Sidebar>
           {pages.map((page) => (
-            <MyTextButton onClick={() => setCurrentPage(page)}>
+            <TextButton onClick={() => setCurrentPage(page)}>
               {page.name}
-            </MyTextButton>
+            </TextButton>
           ))}
           {modals.map((modal) => (
-            <MyButton onClick={() => modal.setShow(true)}>
-              {modal.name}
-            </MyButton>
+            <Button onClick={() => modal.setShow(true)}>{modal.name}</Button>
           ))}
         </Sidebar>
-        <Page pageName={currentPage.name} pageElement={currentPage.element} />
+        <PageOutline
+          pageName={currentPage.name}
+          pageElement={currentPage.element}
+        />
       </section>
       {modals.map((modal) => modal.element)}
     </main>

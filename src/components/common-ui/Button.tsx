@@ -1,15 +1,15 @@
-interface MyButtonProps extends React.DetailedHTMLProps<
+interface ButtonProps extends React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > {
   variant?: "primary";
 }
 
-export function MyButton({
+export function Button({
   children,
   variant = "primary",
   ...buttonParams
-}: MyButtonProps) {
+}: ButtonProps) {
   const colorClasses = {
     primary: "bg-blue-500 text-white disabled:bg-gray-400",
   };
