@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 
-interface MyTabGroupProps extends React.DetailedHTMLProps<
+interface TabGroupProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 > {
@@ -15,13 +15,13 @@ interface MyTabGroupProps extends React.DetailedHTMLProps<
   change?: (index: number) => void;
 }
 
-export function MyTabGroup({
+export function TabGroup({
   children,
   variant = "primary",
   defaultIndex = 0,
   change,
   ...divParams
-}: MyTabGroupProps) {
+}: TabGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState<number>(defaultIndex);
   useEffect(() => {
     if (!change) return;

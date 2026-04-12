@@ -1,15 +1,15 @@
-interface MyTextButtonProps extends React.DetailedHTMLProps<
+interface TextButtonProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 > {
   variant?: "primary";
 }
 
-export function MyTextButton({
+export function TextButton({
   children,
   variant = "primary",
   ...divParams
-}: MyTextButtonProps) {
+}: TextButtonProps) {
   const colorClasses = { primary: "text-blue-500 hover:text-blue-700" };
 
   return (

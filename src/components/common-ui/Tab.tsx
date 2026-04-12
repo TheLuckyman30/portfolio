@@ -1,4 +1,4 @@
-interface MyTabProps extends React.DetailedHTMLProps<
+interface TabProps extends React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > {
@@ -8,14 +8,14 @@ interface MyTabProps extends React.DetailedHTMLProps<
   setSelectedIndex?: (newSelectedIndex: number) => void;
 }
 
-export function MyTab({
+export function Tab({
   children,
   variant = "primary",
   index,
   isSelected,
   setSelectedIndex,
   ...buttonParams
-}: MyTabProps) {
+}: TabProps) {
   if (
     setSelectedIndex !== undefined &&
     isSelected !== undefined &&

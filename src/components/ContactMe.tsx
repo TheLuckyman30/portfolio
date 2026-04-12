@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Backdrop, Input, MyButton, Textarea } from "./";
+import { Backdrop, Input, Button, Textarea } from "./";
 import { useClickOutsie } from "../utils/click-outside-handler";
 
 interface ContactMeProps {
@@ -77,12 +77,12 @@ export function ContactMe({ show, setShow }: ContactMeProps) {
               placeholder="Text"
               required
             />
-            <MyButton
+            <Button
               type="submit"
               disabled={!name || !email || !subject || !text}
             >
               Send Message
-            </MyButton>
+            </Button>
           </div>
         </form>
       </Backdrop>
