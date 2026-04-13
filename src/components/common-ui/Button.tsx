@@ -11,7 +11,7 @@ export function Button({
   ...buttonParams
 }: ButtonProps) {
   const colorClasses = {
-    primary: "bg-blue-500 text-white disabled:bg-gray-400",
+    primary: "bg-blue-700 hover:bg-blue-900 text-white disabled:bg-gray-400",
   };
 
   return (

@@ -10,7 +10,7 @@ export function TextButton({
   variant = "primary",
   ...divParams
 }: TextButtonProps) {
-  const colorClasses = { primary: "text-blue-500 hover:text-blue-700" };
+  const colorClasses = { primary: "text-blue-700 hover:text-blue-900" };
 
   return (
     <div
