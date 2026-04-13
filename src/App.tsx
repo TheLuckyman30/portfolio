@@ -2,7 +2,6 @@ import { useState, type JSX } from "react";
 import { ContactMe, Button, TextButton, Resume, Sidebar } from "./components";
 import { AboutMe, PageOutline, Projects } from "./pages";
 import "./App.css";
-import { ProjPageContextProvider } from "./utils/proj-page-context";
 
 interface Page {
   name: string;
@@ -17,14 +16,7 @@ interface Modal {
 
 const pages: Page[] = [
   { name: "About Me", element: <AboutMe /> },
-  {
-    name: "Projects",
-    element: (
-      <ProjPageContextProvider>
-        <Projects />
-      </ProjPageContextProvider>
-    ),
-  },
+  { name: "Projects", element: <Projects /> },
 ];
 
 function App() {
@@ -48,7 +40,7 @@ function App() {
 
   return (
     <main className="flex justify-center items-center h-screen w-screen bg-gray-200">
-      <section className="bg-white rounded-md shadow-2xl p-5 h-[95%] w-[85%] flex">
+      <section className="bg-white rounded-md overflow-hidden shadow-2xl h-[95%] w-[85%] flex">
         <Sidebar>
           {pages.map((page) => (
             <TextButton onClick={() => setCurrentPage(page)}>
