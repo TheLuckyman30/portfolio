@@ -17,6 +17,13 @@ export function ProjectCard({ project }: ProjectPanelProps) {
           {project.name}
         </div>
         <div className="p-2 grow">{project.description}</div>
+        <div className="flex flex-wrap gap-2 p-2">
+          {project.techUsed.map((tech) => (
+            <div className="min-w-24 p-1 text-sm bg-gray-50 border border-gray-300 rounded-md text-gray-700 text-center">
+              {tech}
+            </div>
+          ))}
+        </div>
         <div className="p-2 border-t border-gray-300 bg-gray-50">
           Links here
         </div>
