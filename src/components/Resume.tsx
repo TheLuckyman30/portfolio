@@ -71,7 +71,7 @@ export function Resume({ show, setShow }: ResumeProps) {
               </svg>
             </a>
           </div>
-          <div className="rounded-md overflow-hidden">
+          <div className="rounded-md border border-gray-300 overflow-hidden">
             <Document file={resume}>
               <Page pageNumber={1} />
             </Document>

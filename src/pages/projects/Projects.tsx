@@ -1,13 +1,15 @@
 import projects from "../../data/my-projects.json";
-import { ProjectPanel } from "./components";
+import { ProjectCard } from "./components";
 
 export function Projects() {
   return (
     <>
-      <div className="flex flex-wrap gap-20 h-full overflow-y-auto">
-        {projects.map((project) => (
-          <ProjectPanel project={project} />
-        ))}
+      <div className="flex justify-center h-full w-full overflow-y-auto">
+        <div className="flex flex-wrap gap-20 w-[80%] justify-center">
+          {projects.map((project) => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
       </div>
     </>
   );

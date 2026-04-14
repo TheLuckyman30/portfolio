@@ -37,21 +37,5 @@
     "tags": ["Education", "Quiz"],
     "siteLink": "",
     "githubLink": ""
-  },
-  {
-    "name": "Stellaris Mod Manager",
-    "description": "A tool for managing and customizing Stellaris mods, including load order optimization and compatibility checks.",
-    "techUsed": ["Typescript", "Electron", "Node.js"],
-    "tags": ["Gaming", "Tooling"],
-    "siteLink": "",
-    "githubLink": ""
-  },
-  {
-    "name": "Schedule Planner",
-    "description": "A web-based planner that allows users to organize schedules, visualize timelines, and manage daily tasks efficiently.",
-    "techUsed": ["React", "Typescript", "Zustand"],
-    "tags": ["Productivity"],
-    "siteLink": "",
-    "githubLink": ""
   }
 ]
