@@ -5,7 +5,7 @@ export function Projects() {
   return (
     <>
       <div className="flex justify-center h-full w-full overflow-y-auto">
-        <div className="flex flex-wrap gap-20 w-[80%] justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           {projects.map((project) => (
             <ProjectCard project={project} />
           ))}

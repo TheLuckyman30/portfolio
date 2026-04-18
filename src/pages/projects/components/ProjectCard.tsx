@@ -7,19 +7,17 @@ interface ProjectPanelProps {
 
 export function ProjectCard({ project }: ProjectPanelProps) {
   return (
-    <div className="flex flex-col w-150 min-h-200 border border-gray-300 rounded-md shadow-md overflow-hidden">
+    <div className="flex flex-col w-100 min-h-100 border border-gray-300 rounded-md shadow-md overflow-hidden">
       <div
-        className="w-full h-100 bg-cover"
+        className="w-full h-40 shrink-0"
         style={{ backgroundImage: `url(${pic})` }}
       />
       <div className="flex flex-col w-full grow">
-        <div className="p-2 font-semibold text-xl text-gray-700 border-b border-gray-300 bg-gray-50">
-          {project.name}
-        </div>
-        <div className="p-2 grow">{project.description}</div>
+        <div className="p-2 text-xl text-gray-700">{project.name}</div>
+        <div className="p-2 pl-5 pr-5 grow text-sm">{project.description}</div>
         <div className="flex flex-wrap gap-2 p-2">
           {project.techUsed.map((tech) => (
-            <div className="min-w-24 p-1 text-sm bg-gray-50 border border-gray-300 rounded-md text-gray-700 text-center">
+            <div className="p-1 text-xs bg-gray-50 border border-gray-300 rounded-md text-gray-700 text-center">
               {tech}
             </div>
           ))}

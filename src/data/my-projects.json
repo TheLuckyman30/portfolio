@@ -1,7 +1,7 @@
 [
   {
     "name": "Dyslexease",
-    "description": "Dyslexease is a full stack web application geared towards helping people with dyslexia read their text documents. Users are able to go on to the website, upload their text documents, and then immediately start making dyslexic friendly modifications to it. The website is able to be used both with and without an account. All settings and preferences get saved to a database (if the user is logged in). The possible text modifications include: Capitalizing the first and last letters of each word, increasing the line spacing, selecting a different font from a list of dyslexic friendly fonts, increasing the font size, adjusting the background and text colors, and being able to specify letter swap pairs (e.g. swapping all b’s and d’s). This project was initially created in 2023 by two people, myself and another person, but we decided to continue development in late 2025 as part of a team of 6 people. The techstack: React, Tanstack Query, NestJs w/PassportJs to help with authentication, Prisma, and Supabase. ",
+    "description": "A web app that simulates an entire Premier League season, generating match results, league tables, and team statistics.",
     "techUsed": [
       "Typescript",
       "React",
