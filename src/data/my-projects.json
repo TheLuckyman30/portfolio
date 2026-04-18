@@ -1,7 +1,7 @@
 [
   {
     "name": "Dyslexease",
-    "description": "A full-stack web app that allows users to input their documents and quickly make dyslexic friendly modifications.",
+    "description": "A web app that simulates an entire Premier League season, generating match results, league tables, and team statistics.",
     "techUsed": [
       "Typescript",
       "React",
@@ -35,22 +35,6 @@
     "description": "An interactive quiz platform that helps users discover potential career paths based on their interests and skills.",
     "techUsed": ["React", "Typescript", "Firebase"],
     "tags": ["Education", "Quiz"],
-    "siteLink": "",
-    "githubLink": ""
-  },
-  {
-    "name": "Stellaris Mod Manager",
-    "description": "A tool for managing and customizing Stellaris mods, including load order optimization and compatibility checks.",
-    "techUsed": ["Typescript", "Electron", "Node.js"],
-    "tags": ["Gaming", "Tooling"],
-    "siteLink": "",
-    "githubLink": ""
-  },
-  {
-    "name": "Schedule Planner",
-    "description": "A web-based planner that allows users to organize schedules, visualize timelines, and manage daily tasks efficiently.",
-    "techUsed": ["React", "Typescript", "Zustand"],
-    "tags": ["Productivity"],
     "siteLink": "",
     "githubLink": ""
   }
