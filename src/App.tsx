@@ -39,23 +39,22 @@ function App() {
   ];
 
   return (
-    <main className="flex justify-center items-center h-screen w-screen bg-gray-200">
-      <section className="bg-white rounded-md overflow-hidden shadow-2xl h-[95%] w-[85%] flex">
-        <Sidebar>
-          {pages.map((page) => (
-            <TextButton onClick={() => setCurrentPage(page)}>
-              {page.name}
-            </TextButton>
-          ))}
-          {modals.map((modal) => (
-            <Button onClick={() => modal.setShow(true)}>{modal.name}</Button>
-          ))}
-        </Sidebar>
-        <PageOutline
-          pageName={currentPage.name}
-          pageElement={currentPage.element}
-        />
-      </section>
+    <main className="flex h-screen w-screen">
+      <Sidebar>
+        {pages.map((page) => (
+          <TextButton onClick={() => setCurrentPage(page)}>
+            {page.name}
+          </TextButton>
+        ))}
+        {modals.map((modal) => (
+          <Button onClick={() => modal.setShow(true)}>{modal.name}</Button>
+        ))}
+      </Sidebar>
+      <PageOutline
+        pageName={currentPage.name}
+        pageElement={currentPage.element}
+      />
+
       {modals.map((modal) => modal.element)}
     </main>
   );
