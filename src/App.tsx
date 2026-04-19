@@ -1,5 +1,5 @@
 import { useState, type JSX } from "react";
-import { ContactMe, Button, TextButton, Resume, Sidebar } from "./components";
+import { ContactMe, Button, TextButton, Resume, Navbar } from "./components";
 import { AboutMe, PageOutline, Projects } from "./pages";
 import "./App.css";
 
@@ -40,7 +40,7 @@ function App() {
 
   return (
     <main className="flex flex-col h-screen w-screen">
-      <Sidebar>
+      <Navbar>
         {pages.map((page) => (
           <TextButton onClick={() => setCurrentPage(page)}>
             {page.name}
@@ -49,7 +49,7 @@ function App() {
         {modals.map((modal) => (
           <Button onClick={() => modal.setShow(true)}>{modal.name}</Button>
         ))}
-      </Sidebar>
+      </Navbar>
       <PageOutline
         pageName={currentPage.name}
         pageElement={currentPage.element}
