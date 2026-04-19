@@ -1,6 +1,6 @@
 import { useState, type JSX } from "react";
 import { ContactMe, Button, TextButton, Resume, Navbar } from "./components";
-import { AboutMe, PageOutline, Projects } from "./pages";
+import { Home, Projects } from "./pages";
 import "./App.css";
 
 interface Page {
@@ -15,7 +15,7 @@ interface Modal {
 }
 
 const pages: Page[] = [
-  { name: "About Me", element: <AboutMe /> },
+  { name: "Home", element: <Home /> },
   { name: "Projects", element: <Projects /> },
 ];
 
@@ -39,7 +39,7 @@ function App() {
   ];
 
   return (
-    <main className="flex flex-col h-screen w-screen">
+    <main>
       <Navbar>
         {pages.map((page) => (
           <TextButton onClick={() => setCurrentPage(page)}>
@@ -50,11 +50,7 @@ function App() {
           <Button onClick={() => modal.setShow(true)}>{modal.name}</Button>
         ))}
       </Navbar>
-      <PageOutline
-        pageName={currentPage.name}
-        pageElement={currentPage.element}
-      />
-
+      {currentPage.element}
       {modals.map((modal) => modal.element)}
     </main>
   );

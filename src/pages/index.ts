@@ -1,3 +1,2 @@
-export { AboutMe } from "./about-me/AboutMe";
+export { Home } from "./home/Home";
 export { Projects } from "./projects/Projects";
-export { PageOutline } from "./PageOutline";
