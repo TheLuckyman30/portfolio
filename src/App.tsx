@@ -39,7 +39,7 @@ function App() {
   ];
 
   return (
-    <main className="flex h-screen w-screen">
+    <main className="flex flex-col h-screen w-screen">
       <Sidebar>
         {pages.map((page) => (
           <TextButton onClick={() => setCurrentPage(page)}>

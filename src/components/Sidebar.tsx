@@ -1,6 +1,6 @@
 export function Sidebar({ children }: { children?: React.ReactNode }) {
   return (
-    <nav className="flex flex-col gap-15 p-5 pr-5 border-r bg-gray-50 border-gray-300 w-fit h-full shadow-xl">
+    <nav className="flex fixed p-3 gap-15 border-b bg-white/80 backdrop-blur-sm border-gray-300 w-full h-fit shadow-md justify-center items-center">
       {children}
     </nav>
   );
