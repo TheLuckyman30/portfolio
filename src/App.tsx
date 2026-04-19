@@ -39,7 +39,7 @@ function App() {
   ];
 
   return (
-    <main>
+    <main className="font-roboto">
       <Navbar>
         {pages.map((page) => (
           <TextButton onClick={() => setCurrentPage(page)}>
