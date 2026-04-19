@@ -16,7 +16,7 @@ interface Modal {
 
 const pages: Page[] = [
   { name: "Home", element: <Home /> },
-  { name: "Projects", element: <Projects /> },
+  { name: "All Projects", element: <Projects /> },
 ];
 
 function App() {
