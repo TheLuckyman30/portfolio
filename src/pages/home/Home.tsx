@@ -1,7 +1,8 @@
-import { AboutMe, FeaturedProjects } from "./sections";
+import { AboutMe, FeaturedProjects, Skills } from "./sections";
 
 const sections = [
   { name: "About Me", element: <AboutMe /> },
+  { name: "Skills", element: <Skills /> },
   { name: "Featured Projects", element: <FeaturedProjects /> },
 ];
 
