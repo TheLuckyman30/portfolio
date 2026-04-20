@@ -1,6 +1,6 @@
 export function AboutMe() {
   return (
-    <p className="text-sm sm:text-lg text-gray-700">
+    <p className="text-sm sm:text-lg text-gray-700 text-justify">
       Hello! My name is Brandon Nauta and I am a senior Computer Science major
       at the University of Delaware. I am a passionate developer with a strong
       interest in web development and software engineering. I have a strong

@@ -19,7 +19,7 @@ export function Home() {
           </p>
         </div>
       </section>
-      <section className="flex flex-col gap-50 mx-auto w-full sm:max-w-6xl px-5 h-fit">
+      <section className="flex flex-col gap-50 mx-auto w-full sm:max-w-5xl px-5 h-fit">
         {sections.map((section) => (
           <div className="flex flex-col gap-10">
             <h1 className="font-semibold font-montserrat text-center text-xl sm:text-3xl text-blue-500">
