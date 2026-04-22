@@ -1,23 +1,52 @@
-interface Skill {
+import { Chip } from "../../../components";
+
+interface SkillCategory {
   name: string;
-  test: string[];
+  skills: string[];
 }
 
-const skills: Skill[] = [
+const skillsCategories: SkillCategory[] = [
   {
     name: "Programming Languages",
-    test: ["Typescript", "Javascript", "Python", "C", "C++", "Java", "SQL"],
+    skills: [
+      "Typescript",
+      "Javascript",
+      "Python",
+      "C",
+      "C++",
+      "Java",
+      "SQL",
+      "Kotlin",
+    ],
   },
-  { name: "Frameworks/Libraries", test: [] },
+  {
+    name: "Frameworks/Libraries",
+    skills: [
+      "React",
+      "Tanstack Start",
+      "Prisma",
+      "NestJs",
+      "ExpressJs",
+      "Android Studio",
+    ],
+  },
+  {
+    name: "Software",
+    skills: ["Git", "Github", "Supabase"],
+  },
 ];
 
 export function Skills() {
   return (
     <div className="flex flex-col gap-10">
-      {skills.map((skill) => (
-        <div>
-          <h2 className="text-lg text-gray-500 font-medium">{skill.name}</h2>
-          {skill.test.map((t) => t)}
+      {skillsCategories.map((category) => (
+        <div className="flex flex-col gap-5">
+          <h2 className="text-lg text-gray-500 font-medium">{category.name}</h2>
+          <div className="flex flex-wrap gap-2">
+            {category.skills.map((skill) => (
+              <Chip size={"md"}>{skill}</Chip>
+            ))}
+          </div>
         </div>
       ))}
     </div>
