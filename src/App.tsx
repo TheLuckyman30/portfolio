@@ -1,6 +1,6 @@
 import { useState, type JSX } from "react";
-import { ContactMe, Button, TextButton, Resume, Sidebar } from "./components";
-import { AboutMe, PageOutline, Projects } from "./pages";
+import { ContactMe, Button, TextButton, Resume, Navbar } from "./components";
+import { Home, Projects } from "./pages";
 import "./App.css";
 
 interface Page {
@@ -15,8 +15,8 @@ interface Modal {
 }
 
 const pages: Page[] = [
-  { name: "About Me", element: <AboutMe /> },
-  { name: "Projects", element: <Projects /> },
+  { name: "Home", element: <Home /> },
+  { name: "All Projects", element: <Projects /> },
 ];
 
 function App() {
@@ -39,23 +39,18 @@ function App() {
   ];
 
   return (
-    <main className="flex justify-center items-center h-screen w-screen bg-gray-200">
-      <section className="bg-white rounded-md overflow-hidden shadow-2xl h-[95%] w-[85%] flex">
-        <Sidebar>
-          {pages.map((page) => (
-            <TextButton onClick={() => setCurrentPage(page)}>
-              {page.name}
-            </TextButton>
-          ))}
-          {modals.map((modal) => (
-            <Button onClick={() => modal.setShow(true)}>{modal.name}</Button>
-          ))}
-        </Sidebar>
-        <PageOutline
-          pageName={currentPage.name}
-          pageElement={currentPage.element}
-        />
-      </section>
+    <main className="font-roboto">
+      <Navbar>
+        {pages.map((page) => (
+          <TextButton onClick={() => setCurrentPage(page)}>
+            {page.name}
+          </TextButton>
+        ))}
+        {modals.map((modal) => (
+          <Button onClick={() => modal.setShow(true)}>{modal.name}</Button>
+        ))}
+      </Navbar>
+      {currentPage.element}
       {modals.map((modal) => modal.element)}
     </main>
   );

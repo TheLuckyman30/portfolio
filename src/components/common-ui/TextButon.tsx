@@ -15,7 +15,7 @@ export function TextButton({
   return (
     <div
       {...divParams}
-      className={`text-2xl cursor-pointer font-medium duration-75 hover:scale-103 w-fit select-none ${colorClasses[variant]}`}
+      className={`text-lg cursor-pointer font-medium duration-75 hover:scale-103 w-fit select-none whitespace-nowrap ${colorClasses[variant]}`}
     >
       {children}
     </div>
