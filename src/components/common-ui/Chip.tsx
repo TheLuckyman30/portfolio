@@ -12,10 +12,17 @@ export function Chip({
   children,
   ...divProps
 }: ChipProps) {
+  const sizeClasses = {
+    xs: "text-xs",
+    sm: "text-sm",
+    md: "text-md",
+    lg: "text-lg",
+  };
+
   return (
     <div
       {...divProps}
-      className={`p-1 text-${size} bg-gray-50 border border-gray-300 rounded-md text-gray-700 text-center`}
+      className={`p-1 ${sizeClasses[size]} bg-gray-50 border border-gray-300 rounded-md text-gray-700 text-center sm:whitespace-nowrap`}
     >
       {children}
     </div>

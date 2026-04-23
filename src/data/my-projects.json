@@ -25,7 +25,7 @@
   {
     "name": "Campus Event Bot",
     "description": "A Discord bot that manages campus events, sends reminders, and allows users to export schedules as calendar files.",
-    "techUsed": ["Typescript", "Node.js", "Discord.js"],
+    "techUsed": ["Typescript", "NodeJs", "DiscordJs"],
     "tags": ["Bot", "Automation"],
     "siteLink": "",
     "githubLink": ""
