@@ -12,10 +12,10 @@ export function FeaturedProjects() {
     const title = project.name.toLowerCase();
 
     return (
-      !searchValue &&
-      (title.includes(searchValue) ||
-        techUsed.includes(searchValue) ||
-        description.includes(searchValue))
+      !searchValue ||
+      title.includes(searchValue) ||
+      techUsed.includes(searchValue) ||
+      description.includes(searchValue)
     );
   });
 
@@ -24,7 +24,7 @@ export function FeaturedProjects() {
       <div className="flex w-fit">
         <Input
           placeholder="Search"
-          onChange={(e) => setSearchValue(e.target.value.toLowerCase().trim())}
+          onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
         />
       </div>
       <div className="flex flex-wrap justify-between gap-15">
