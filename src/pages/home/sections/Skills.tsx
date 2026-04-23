@@ -29,7 +29,7 @@ const skillsCategories: SkillCategory[] = [
       "Prisma",
       "NestJs",
       "ExpressJs",
-      "Android Studio",
+      "Zustand",
     ],
   },
   {
@@ -38,7 +38,7 @@ const skillsCategories: SkillCategory[] = [
   },
   {
     name: "Tools/Software",
-    skills: ["Git", "Github", "Vite"],
+    skills: ["Git", "Github", "Vite", "Android Studio"],
   },
 ];
 

@@ -19,6 +19,7 @@ import {
   Typescript,
   Vite,
 } from "@thesvg/react";
+import zustand from "../../assets/svgs/zustand.svg";
 
 export function findIcon(
   label: string,
@@ -32,6 +33,8 @@ export function findIcon(
   };
 
   switch (label.toLowerCase()) {
+    // Programming Languages
+
     case "typescript":
       return <Typescript className={`${sizeClasses[size]}`} />;
     case "javascript":
@@ -44,14 +47,29 @@ export function findIcon(
       return <Cplusplus className={`${sizeClasses[size]}`} />;
     case "java":
       return <Java className={`${sizeClasses[size]}`} />;
-    case "sql":
-      return <AzureSqlDatabase className={`${sizeClasses[size]}`} />;
+    case "kotlin":
+      return (
+        <img
+          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/kotlin/default.svg"
+          className={`${sizeClasses[size]}`}
+        />
+      );
     case "html":
       return <Html5 className={`${sizeClasses[size]}`} />;
     case "css":
       return <Css className={`${sizeClasses[size]}`} />;
+
+    // Frameworks/Libraries
+
     case "react":
       return <React className={`${sizeClasses[size]}`} />;
+    case "tanstack start":
+      return (
+        <img
+          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tanstack/default.svg"
+          className={`${sizeClasses[size]}`}
+        />
+      );
     case "prisma":
       return (
         <Prisma
@@ -62,6 +80,30 @@ export function findIcon(
       return <Nestjs className={`${sizeClasses[size]}`} />;
     case "expressjs":
       return <Express className={`${sizeClasses[size]}`} />;
+    case "zustand":
+      return <img src={zustand} className={`${sizeClasses[size]}`} />;
+
+    // Database
+
+    case "sql":
+      return <AzureSqlDatabase className={`${sizeClasses[size]}`} />;
+    case "supabase":
+      return (
+        <img
+          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/supabase/default.svg"
+          className={`${sizeClasses[size]}`}
+        />
+      );
+    case "postgres":
+      return (
+        <img
+          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/postgresql/default.svg"
+          className={`${sizeClasses[size]}`}
+        />
+      );
+
+    // Tools/Software
+
     case "android studio":
       return <AndroidStudio className={`${sizeClasses[size]}`} />;
     case "git":
@@ -76,37 +118,6 @@ export function findIcon(
       return <Nodedotjs className={`${sizeClasses[size]}`} />;
     case "discordjs":
       return <Discorddotjs className={`${sizeClasses[size]}`} />;
-
-    // The components from the ones below don't work properly, so cdn it is
-
-    case "kotlin":
-      return (
-        <img
-          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/kotlin/default.svg"
-          className={`${sizeClasses[size]}`}
-        />
-      );
-    case "supabase":
-      return (
-        <img
-          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/supabase/default.svg"
-          className={`${sizeClasses[size]}`}
-        />
-      );
-    case "tanstack start":
-      return (
-        <img
-          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tanstack/default.svg"
-          className={`${sizeClasses[size]}`}
-        />
-      );
-    case "postgres":
-      return (
-        <img
-          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/postgresql/default.svg"
-          className={`${sizeClasses[size]}`}
-        />
-      );
     default:
       return null;
   }
