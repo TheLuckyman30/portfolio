@@ -1,0 +1,16 @@
+import type { MyProject } from "./interfaces";
+
+export function filterProjects(projects: MyProject[], searchString: string) {
+  return projects.filter((project) => {
+    const description = project.description.toLowerCase();
+    const techUsed = project.techUsed.join(",").toLowerCase();
+    const title = project.name.toLowerCase();
+
+    return (
+      !searchString ||
+      title.includes(searchString) ||
+      techUsed.includes(searchString) ||
+      description.includes(searchString)
+    );
+  });
+}
