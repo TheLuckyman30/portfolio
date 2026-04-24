@@ -1,4 +1,5 @@
 import { Chip } from "../../../components";
+import { findIcon } from "../../../components/common-ui";
 
 interface SkillCategory {
   name: string;
@@ -15,8 +16,9 @@ const skillsCategories: SkillCategory[] = [
       "C",
       "C++",
       "Java",
-      "SQL",
       "Kotlin",
+      "HTML",
+      "CSS",
     ],
   },
   {
@@ -27,12 +29,16 @@ const skillsCategories: SkillCategory[] = [
       "Prisma",
       "NestJs",
       "ExpressJs",
-      "Android Studio",
+      "Zustand",
     ],
   },
   {
-    name: "Software",
-    skills: ["Git", "Github", "Supabase"],
+    name: "Database",
+    skills: ["SQL", "Postgres", "Supabase"],
+  },
+  {
+    name: "Tools/Software",
+    skills: ["Git", "Github", "Vite", "Android Studio"],
   },
 ];
 
@@ -44,7 +50,12 @@ export function Skills() {
           <h2 className="text-lg text-gray-500 font-medium">{category.name}</h2>
           <div className="flex flex-wrap gap-2">
             {category.skills.map((skill) => (
-              <Chip size={"md"}>{skill}</Chip>
+              <Chip size={"md"}>
+                <div className="flex items-center gap-2">
+                  {findIcon(skill, "md")}
+                  {skill}
+                </div>
+              </Chip>
             ))}
           </div>
         </div>

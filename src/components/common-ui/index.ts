@@ -6,3 +6,4 @@ export { Tab } from "./Tab";
 export { Button } from "./Button";
 export { TextButton } from "./TextButon";
 export { Chip } from "./Chip";
+export { findIcon } from "./Icons";
