@@ -1,3 +1,3 @@
-export { useClickOutsie } from "./click-outside-handler";
-export { filterProjects } from "./filter-projects";
-export * from "./selected-proj-context";
+export * from "./interfaces";
+export * from "./custom-hooks";
+export * from "./helpers";

@@ -1,7 +1,7 @@
 import { Backdrop, Chip, findIcon } from "./common-ui";
-import { useClickOutsie, useSelectedProjConext } from "../utils";
+import { useCloseModal, useSelectedProjConext } from "../utils";
 import { useCallback, useRef } from "react";
-import type { MyProject } from "../utils/interfaces";
+import type { MyProject } from "../utils";
 import pic from "../assets/images/test.png";
 
 interface ProjectModalProps {
@@ -10,9 +10,9 @@ interface ProjectModalProps {
 
 export function ProjectModal({ selectedProject }: ProjectModalProps) {
   const { setSelectedProject } = useSelectedProjConext();
-  const closeModal = useCallback(() => setSelectedProject(null), []);
+  const deselectProj = useCallback(() => setSelectedProject(null), []);
   const divRef = useRef<HTMLDivElement | null>(null);
-  useClickOutsie(divRef, closeModal);
+  useCloseModal(divRef, deselectProj);
 
   return (
     <Backdrop>

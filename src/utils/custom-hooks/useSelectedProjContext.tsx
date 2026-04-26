@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import type { MyProject } from "./interfaces";
+import type { MyProject } from "../";
 
 interface SelectedProjState {
   selectedProject: MyProject | null;

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export function useClickOutsie(
+export function useCloseModal(
   ref: React.RefObject<HTMLElement | null>,
   fn?: () => void,
 ) {

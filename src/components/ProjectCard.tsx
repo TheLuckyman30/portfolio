@@ -1,7 +1,7 @@
 import { Chip, findIcon } from "./common-ui";
-import type { MyProject } from "../utils/interfaces";
-import pic from "../assets/images/test.png";
 import { useSelectedProjConext } from "../utils";
+import type { MyProject } from "../utils";
+import pic from "../assets/images/test.png";
 
 interface ProjectCardProps {
   project: MyProject;

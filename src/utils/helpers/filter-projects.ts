@@ -1,4 +1,4 @@
-import type { MyProject } from "./interfaces";
+import type { MyProject } from "../";
 
 export function filterProjects(projects: MyProject[], searchString: string) {
   return projects.filter((project) => {
