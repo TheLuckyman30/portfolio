@@ -10,8 +10,8 @@ const contacts = [
 
 export function Footer() {
   return (
-    <footer className="flex w-screen justify-center bg-slate-700">
-      <div className="flex flex-col w-full mx-auto sm:max-w-5xl p-5 gap-5 justify-center items-center text-white">
+    <footer className="flex w-screen justify-center bg-white border-t border-gray-300 shadow-[0_-1px_3px_0_rgba(0,0,0,0.1)]">
+      <div className="flex flex-col w-full mx-auto sm:max-w-5xl p-5 gap-5 justify-center items-center">
         <small>&copy; 2026 Brandon Nauta. All rights reserved.</small>
         <div className="flex gap-10">
           {contacts.map((contact) => (
