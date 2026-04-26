@@ -16,12 +16,8 @@ export function FeaturedProjects() {
         />
       </div>
       <div className="grid sm:grid-cols-2 gap-10 justify-items-center lg:justify-items-start">
-        {filteredProjects.map((project, index) => (
-          <div
-            className={
-              index % 2 === 0 ? "lg:justify-self-start" : "lg:justify-self-end"
-            }
-          >
+        {filteredProjects.map((project) => (
+          <div className="even:justify-self-end">
             <ProjectCard project={project} />
           </div>
         ))}
