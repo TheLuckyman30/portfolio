@@ -15,7 +15,7 @@ export function FeaturedProjects() {
           onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
         />
       </div>
-      <div className="grid sm:grid-cols-2 gap-10 justify-items-center lg:justify-items-start">
+      <div className="grid sm:grid-cols-2 gap-10 justify-items-center lg:justify-items-start ">
         {filteredProjects.map((project) => (
           <div className="even:justify-self-end">
             <ProjectCard project={project} />

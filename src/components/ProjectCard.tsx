@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex flex-col w-full sm:w-70 lg:w-100 min-h-100 border border-gray-300 rounded-md shadow-md overflow-hidden">
+    <div className="flex flex-col w-full sm:w-70 lg:w-100 h-full min-h-100 border border-gray-300 rounded-md shadow-md overflow-hidden">
       <div className="w-full h-40" style={{ backgroundImage: `url(${pic})` }} />
       <div className="p-2 text-xl text-gray-700">{project.name}</div>
       <div className="p-2 px-5 grow text-sm">{project.shortDesc}</div>
