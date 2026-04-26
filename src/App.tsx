@@ -1,6 +1,7 @@
 import { useState, type JSX } from "react";
-import { TextButton, Navbar, Footer } from "./components";
+import { TextButton, Navbar, Footer, ProjectModal } from "./components";
 import { Home, Projects } from "./pages";
+import { useSelectedProjConext } from "./utils";
 import "./App.css";
 
 interface Page {
@@ -15,6 +16,7 @@ const pages: Page[] = [
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>(pages[0]);
+  const { selectedProject } = useSelectedProjConext();
 
   return (
     <main className="font-roboto">
@@ -27,6 +29,9 @@ function App() {
       </Navbar>
       {currentPage.element}
       <Footer />
+      {selectedProject !== null && (
+        <ProjectModal selectedProject={selectedProject} />
+      )}
     </main>
   );
 }
