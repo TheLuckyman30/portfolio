@@ -16,9 +16,15 @@ export function FeaturedProjects() {
           onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
         />
       </div>
-      <div className="flex flex-wrap justify-between gap-15">
-        {filteredProjects.map((project) => (
-          <ProjectCard project={project} />
+      <div className="grid sm:grid-cols-2 gap-10 justify-items-center lg:justify-items-start">
+        {filteredProjects.map((project, index) => (
+          <div
+            className={
+              index % 2 === 0 ? "lg:justify-self-start" : "lg:justify-self-end"
+            }
+          >
+            <ProjectCard project={project} />
+          </div>
         ))}
         {!filteredProjects.length && (
           <p className="w-full text-gray-700">No Projects Found!</p>

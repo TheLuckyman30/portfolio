@@ -16,7 +16,7 @@ export function Projects() {
           onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
         />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-20">
         {filteredProjects.map((project) => (
           <ProjectCard project={project} />
         ))}
