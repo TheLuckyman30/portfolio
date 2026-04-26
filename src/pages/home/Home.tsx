@@ -1,9 +1,11 @@
 import { AboutMe, FeaturedProjects, Skills } from "./sections";
+import { ContactMe } from "./sections/ContactMe";
 
 const sections = [
   { name: "About Me", element: <AboutMe /> },
   { name: "Skills", element: <Skills /> },
   { name: "Featured Projects", element: <FeaturedProjects /> },
+  { name: "Contact Me", element: <ContactMe /> },
 ];
 
 export function Home() {

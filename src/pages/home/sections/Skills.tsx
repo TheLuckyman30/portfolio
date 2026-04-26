@@ -1,5 +1,5 @@
 import { Chip } from "../../../components";
-import { findIcon } from "../../../components/common-ui";
+import { findIcon } from "../../../components";
 
 interface SkillCategory {
   name: string;
