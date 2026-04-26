@@ -1,8 +1,8 @@
 [
   {
     "name": "Dyslexease",
-    "shortDesc": "A web app that simulates an entire Premier League season, generating match results, league tables, and team statistics.",
-    "longDesc": "",
+    "shortDesc": "Dyslexease is a full-stack web application that helps users make uploaded documents more accessible for people with dyslexia through customizable text modifications. Built in a team of seven, the platform includes user authentication, persistent document storage, and saved accessibility preferences, allowing users to easily revisit and manage their personalized document settings.",
+    "longDesc": "Dyslexease is a collaborative full-stack accessibility platform designed to help users adapt uploaded documents for readers with dyslexia. Working as part of a seven-person development team, I helped build a system that enables users to apply dyslexia-friendly text modifications—such as customized formatting and readability adjustments—to improve document accessibility. The application includes a secure authentication system, persistent document storage, and user preference saving so that personalized accessibility settings can be reused across sessions. The frontend was developed with React and TypeScript, using Zustand for state management and TanStack Query for efficient server-state handling. The backend was built with NestJS, with Prisma managing communication between the application and a PostgreSQL database hosted through Supabase. The frontend and backend were deployed separately using Cloudflare and Render, creating a scalable and responsive full-stack solution focused on accessibility.",
     "techUsed": [
       "Typescript",
       "React",

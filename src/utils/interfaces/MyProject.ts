@@ -3,7 +3,6 @@ export interface MyProject {
   shortDesc: string;
   longDesc: string;
   techUsed: string[];
-
   siteLink: string;
   githubLink: string;
 }
