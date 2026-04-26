@@ -25,9 +25,7 @@ export function ProjectModal({ selectedProject }: ProjectModalProps) {
           style={{ backgroundImage: `url(${pic})` }}
         />
         <div className="p-2 text-xl text-gray-700">{selectedProject.name}</div>
-        <div className="p-2 px-5 grow text-sm">
-          {selectedProject.description}
-        </div>
+        <div className="p-2 px-5 grow text-sm">{selectedProject.longDesc}</div>
         <div className="flex flex-wrap gap-2 p-2">
           {selectedProject.techUsed.map((tech) => (
             <Chip>

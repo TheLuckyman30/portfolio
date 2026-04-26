@@ -17,7 +17,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     >
       <div className="w-full h-40" style={{ backgroundImage: `url(${pic})` }} />
       <div className="p-2 text-xl text-gray-700">{project.name}</div>
-      <div className="p-2 px-5 grow text-sm">{project.description}</div>
+      <div className="p-2 px-5 grow text-sm">{project.shortDesc}</div>
       <div className="flex flex-wrap gap-2 p-2">
         {project.techUsed.map((tech) => (
           <Chip>

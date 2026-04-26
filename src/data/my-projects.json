@@ -1,7 +1,8 @@
 [
   {
     "name": "Dyslexease",
-    "description": "A web app that simulates an entire Premier League season, generating match results, league tables, and team statistics.",
+    "shortDesc": "A web app that simulates an entire Premier League season, generating match results, league tables, and team statistics.",
+    "longDesc": "",
     "techUsed": [
       "Typescript",
       "React",
@@ -10,31 +11,30 @@
       "Postgres",
       "Zustand"
     ],
-    "tags": [],
     "siteLink": "",
     "githubLink": "https://github.com/selinAbacaz/CapstoneDyslexease"
   },
   {
     "name": "Premier League Simulator",
-    "description": "A web app that simulates an entire Premier League season, generating match results, league tables, and team statistics.",
+    "shortDesc": "A web app that simulates an entire Premier League season, generating match results, league tables, and team statistics.",
+    "longDesc": "",
     "techUsed": ["Typescript", "React", "Vite", "CSS"],
-    "tags": ["Simulation", "Sports"],
     "siteLink": "",
     "githubLink": ""
   },
   {
     "name": "Campus Event Bot",
-    "description": "A Discord bot that manages campus events, sends reminders, and allows users to export schedules as calendar files.",
+    "shortDesc": "A Discord bot that manages campus events, sends reminders, and allows users to export schedules as calendar files.",
+    "longDesc": "",
     "techUsed": ["Typescript", "NodeJs", "DiscordJs"],
-    "tags": ["Bot", "Automation"],
     "siteLink": "",
     "githubLink": ""
   },
   {
     "name": "Career Quiz Platform",
-    "description": "An interactive quiz platform that helps users discover potential career paths based on their interests and skills.",
+    "shortDesc": "An interactive quiz platform that helps users discover potential career paths based on their interests and skills.",
+    "longDesc": "",
     "techUsed": ["React", "Typescript", "Firebase"],
-    "tags": ["Education", "Quiz"],
     "siteLink": "",
     "githubLink": ""
   }
