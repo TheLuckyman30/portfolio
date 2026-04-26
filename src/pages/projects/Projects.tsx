@@ -9,7 +9,7 @@ export function Projects() {
   const filteredProjects = filterProjects(projects, searchValue);
 
   return (
-    <section className="flex flex-col justify-center items-center min-h-screen pt-20 gap-10">
+    <section className="flex flex-col justify-center items-center min-h-screen pt-20 gap-10 p-5">
       <div className="flex w-fit">
         <Input
           placeholder="Search"
