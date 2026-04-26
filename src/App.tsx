@@ -1,5 +1,5 @@
 import { useState, type JSX } from "react";
-import { TextButton, Navbar } from "./components";
+import { TextButton, Navbar, Footer } from "./components";
 import { Home, Projects } from "./pages";
 import "./App.css";
 
@@ -26,6 +26,7 @@ function App() {
         ))}
       </Navbar>
       {currentPage.element}
+      <Footer />
     </main>
   );
 }
