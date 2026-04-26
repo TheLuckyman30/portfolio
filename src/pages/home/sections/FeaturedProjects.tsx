@@ -2,6 +2,7 @@ import { Input, ProjectCard } from "../../../components";
 import { useState } from "react";
 import { filterProjects } from "../../../utils";
 import projects from "../../../data/my-projects.json";
+import { ProjectModal } from "../../../components/ProjectModal";
 
 export function FeaturedProjects() {
   const [searchValue, setSearchValue] = useState<string>("");
@@ -25,6 +26,7 @@ export function FeaturedProjects() {
           <p className="w-full text-gray-700">No Projects Found!</p>
         )}
       </div>
+      <ProjectModal selectedProject={projects[0]}></ProjectModal>
     </div>
   );
 }

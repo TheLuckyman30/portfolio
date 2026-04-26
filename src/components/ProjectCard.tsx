@@ -2,11 +2,11 @@ import { Chip, findIcon } from "./common-ui";
 import type { MyProject } from "../utils/interfaces";
 import pic from "../assets/images/test.png";
 
-interface ProjectPanelProps {
+interface ProjectCardProps {
   project: MyProject;
 }
 
-export function ProjectCard({ project }: ProjectPanelProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="flex flex-col w-full sm:w-70 lg:w-100 min-h-100 border border-gray-300 rounded-md shadow-md overflow-hidden">
       <div className="w-full h-40" style={{ backgroundImage: `url(${pic})` }} />
