@@ -11,6 +11,7 @@ import {
   Html5,
   Java,
   Javascript,
+  Linkedin,
   Nestjs,
   Nodedotjs,
   Prisma,
@@ -118,6 +119,12 @@ export function findIcon(
       return <Nodedotjs className={`${sizeClasses[size]}`} />;
     case "discordjs":
       return <Discorddotjs className={`${sizeClasses[size]}`} />;
+    case "linkedin":
+      return (
+        <Linkedin
+          className={`${sizeClasses[size]} text-black **:fill-current`}
+        />
+      );
     default:
       return null;
   }
