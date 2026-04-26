@@ -1,4 +1,6 @@
 import { Backdrop, Chip, findIcon } from "./common-ui";
+import { useClickOutsie, useSelectedProjConext } from "../utils";
+import { useCallback, useRef } from "react";
 import type { MyProject } from "../utils/interfaces";
 import pic from "../assets/images/test.png";
 
@@ -7,9 +9,17 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ selectedProject }: ProjectModalProps) {
+  const { setSelectedProject } = useSelectedProjConext();
+  const closeModal = useCallback(() => setSelectedProject(null), []);
+  const divRef = useRef<HTMLDivElement | null>(null);
+  useClickOutsie(divRef, closeModal);
+
   return (
     <Backdrop>
-      <div className="flex flex-col w-[90%] min-h-[90%] 2xl:w-200 2xl:min-h-150 rounded-md shadow-xl overflow-hidden bg-white">
+      <div
+        ref={divRef}
+        className="flex flex-col w-[90%] min-h-[90%] 2xl:w-200 2xl:min-h-150 rounded-md shadow-xl overflow-hidden bg-white"
+      >
         <div
           className="w-full h-40"
           style={{ backgroundImage: `url(${pic})` }}

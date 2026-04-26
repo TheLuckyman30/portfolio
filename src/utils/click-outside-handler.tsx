@@ -2,25 +2,32 @@ import { useEffect } from "react";
 
 export function useClickOutsie(
   ref: React.RefObject<HTMLElement | null>,
-  show: boolean,
-  setShow: (show: boolean) => void,
+  fn?: () => void,
 ) {
   useEffect(() => {
-    if (!show) return;
-
     function handleClickOutside(event: MouseEvent) {
       if (
         ref.current &&
         event.target instanceof Node &&
         !ref.current.contains(event.target)
       ) {
-        setShow(false);
+        fn?.();
+      }
+    }
+
+    function handleClickEscape(event: KeyboardEvent) {
+      console.log("test");
+      if (event.key === "Escape") {
+        fn?.();
       }
     }
 
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleClickEscape);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleClickEscape);
     };
-  }, [ref, show]);
+  }, [ref, fn]);
 }

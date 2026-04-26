@@ -3,7 +3,7 @@ import type { MyProject } from "./interfaces";
 
 interface SelectedProjState {
   selectedProject: MyProject | null;
-  setSelectedProject: (newProj: MyProject) => void;
+  setSelectedProject: (newProj: MyProject | null) => void;
 }
 
 const SelectedProjContext = createContext<SelectedProjState | undefined>(
