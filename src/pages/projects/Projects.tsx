@@ -1,7 +1,6 @@
 import { useState } from "react";
 import projects from "../../data/my-projects.json";
-import { ProjectCard } from "./components";
-import { Input } from "../../components";
+import { Input, ProjectCard } from "../../components";
 import { filterProjects } from "../../utils";
 
 export function Projects() {

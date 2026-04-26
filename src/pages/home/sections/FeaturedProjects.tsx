@@ -1,5 +1,4 @@
-import { ProjectCard } from "../../projects/components";
-import { Input } from "../../../components";
+import { Input, ProjectCard } from "../../../components";
 import { useState } from "react";
 import { filterProjects } from "../../../utils";
 import projects from "../../../data/my-projects.json";

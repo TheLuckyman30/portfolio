@@ -1,6 +1,6 @@
-import type { MyProject } from "../../../utils/interfaces";
-import pic from "../../../assets/images/test.png";
-import { Chip, findIcon } from "../../../components";
+import { Chip, findIcon } from "./common-ui";
+import type { MyProject } from "../utils/interfaces";
+import pic from "../assets/images/test.png";
 
 interface ProjectPanelProps {
   project: MyProject;
