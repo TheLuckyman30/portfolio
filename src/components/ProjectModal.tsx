@@ -18,7 +18,7 @@ export function ProjectModal({ selectedProject }: ProjectModalProps) {
     <Backdrop>
       <div
         ref={divRef}
-        className="flex flex-col w-[90%] min-h-[90%] 2xl:w-200 2xl:min-h-150 rounded-md shadow-xl overflow-hidden bg-white"
+        className="flex flex-col w-[90%] min-h-[90%] 2xl:w-200 2xl:min-h-150 rounded-md shadow-xl overflow-hidden bg-white overscroll-contain"
       >
         <div
           className="w-full h-40"
