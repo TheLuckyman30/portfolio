@@ -1,5 +1,6 @@
 import { FeaturedProjects, Introduction, Skills } from "./sections";
 import { ContactMe } from "./sections/ContactMe";
+import picOfMe from "../../assets/images/me.png";
 
 const sections = [
   { name: "Introduction", element: <Introduction /> },
@@ -12,7 +13,10 @@ export function Home() {
   return (
     <section className="flex flex-col justify-center items-center p-5">
       <section className="flex font-montserrat gap-5 items-center min-h-screen">
-        <div className="rounded-full h-25 w-25 border border-blue-700 bg-gray-200 md:h-55 md:w-55" />
+        <div
+          className="rounded-full shadow-xl h-25 w-25 bg-gray-200 md:h-55 md:w-55 bg-cover"
+          style={{ backgroundImage: `url(${picOfMe})` }}
+        />
         <div>
           <p className="font-semibold text-2xl sm:text-4xl md:text-6xl">
             Brandon Nauta
