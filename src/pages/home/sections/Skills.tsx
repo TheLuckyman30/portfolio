@@ -34,7 +34,7 @@ const skillsCategories: SkillCategory[] = [
   },
   {
     name: "Database",
-    skills: ["SQL", "Postgres", "Supabase"],
+    skills: ["SQL", "PostgreSQL", "Supabase"],
   },
   {
     name: "Tools/Software",

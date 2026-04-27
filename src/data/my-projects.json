@@ -4,38 +4,70 @@
     "shortDesc": "Dyslexease is a full-stack web application that helps users make uploaded documents more accessible for people with dyslexia through customizable text modifications. Built in a team of seven, the platform includes user authentication, persistent document storage, and saved accessibility preferences, allowing users to easily revisit and manage their personalized document settings.",
     "longDesc": "Dyslexease is a collaborative full-stack accessibility platform designed to help users adapt uploaded documents for readers with dyslexia. Working as part of a seven-person development team, I helped build a system that enables users to apply dyslexia-friendly text modifications—such as customized formatting and readability adjustments—to improve document accessibility. The application includes a secure authentication system, persistent document storage, and user preference saving so that personalized accessibility settings can be reused across sessions. The frontend was developed with React and TypeScript, using Zustand for state management and TanStack Query for efficient server-state handling. The backend was built with NestJS, with Prisma managing communication between the application and a PostgreSQL database hosted through Supabase. The frontend and backend were deployed separately using Cloudflare and Render, creating a scalable and responsive full-stack solution focused on accessibility.",
     "techUsed": [
-      "Typescript",
       "React",
-      "NestJs",
+      "TypeScript",
+      "Zustand",
+      "TanStack Query",
+      "NestJS",
+      "Supabase",
       "Prisma",
-      "Postgres",
-      "Zustand"
+      "PostgreSQL"
     ],
     "siteLink": "",
-    "githubLink": "https://github.com/selinAbacaz/CapstoneDyslexease"
+    "githubLink": "https://github.com/selinAbacaz/CapstoneDyslexease",
+    "featured": true
   },
   {
-    "name": "Premier League Simulator",
-    "shortDesc": "A web app that simulates an entire Premier League season, generating match results, league tables, and team statistics.",
-    "longDesc": "",
-    "techUsed": ["Typescript", "React", "Vite", "CSS"],
+    "name": "Goldfish Brain",
+    "shortDesc": "Goldfish Brain is a task management web application that allows users to create task lists and use a fishing-themed minigame to randomly select the next task to work on. It combines productivity with gamification to reduce decision fatigue and make task selection more engaging. The app includes authentication and persistent storage and was developed in a team of three.",
+    "longDesc": "Goldfish Brain is a full-stack productivity application that blends traditional task management with gamification. Users can create and manage multiple task lists, each containing individual tasks. Instead of manually deciding what to work on next, users select a list and play an interactive fishing minigame that randomly selects a task, helping reduce decision fatigue and making productivity more engaging. The application includes authentication and persistent data storage so users can securely access and manage their tasks across sessions. The frontend was built using TanStack Start with TypeScript and Zustand for state management, while the backend uses NestJS with Prisma managing a PostgreSQL database hosted on Supabase. The project was developed in a team of three and deployed using Cloudflare for the frontend and Render for the backend, forming a scalable full-stack system.",
+    "techUsed": [
+      "TanStack Start",
+      "TypeScript",
+      "Zustand",
+      "NestJS",
+      "Supabase",
+      "Prisma",
+      "PostgreSQL"
+    ],
     "siteLink": "",
-    "githubLink": ""
+    "githubLink": "",
+    "featured": true
   },
   {
-    "name": "Campus Event Bot",
-    "shortDesc": "A Discord bot that manages campus events, sends reminders, and allows users to export schedules as calendar files.",
-    "longDesc": "",
-    "techUsed": ["Typescript", "NodeJs", "DiscordJs"],
+    "name": "Career Chef",
+    "shortDesc": "Career Chef is a frontend-only web app that helps users explore career paths. Users take either a basic or detailed quiz, and the app uses the GPT API to generate personalized career suggestions based on their answers. Built in a team of three.",
+    "longDesc": "Career Chef is a frontend application designed to help users discover potential career options through interactive quizzes. Users can choose between two quiz types—basic or detailed—depending on how in-depth they want their experience to be. After completing the quiz, their responses are processed through the GPT API, which generates tailored career recommendations. The project was developed collaboratively by a team of three and focuses on combining simple UX with AI-driven personalization. Built using React and TypeScript, the application is hosted on GitHub and emphasizes accessibility, responsiveness, and meaningful AI-generated feedback for users exploring career options.",
+    "techUsed": ["React", "TypeScript"],
     "siteLink": "",
-    "githubLink": ""
+    "githubLink": "",
+    "featured": true
   },
   {
-    "name": "Career Quiz Platform",
-    "shortDesc": "An interactive quiz platform that helps users discover potential career paths based on their interests and skills.",
-    "longDesc": "",
-    "techUsed": ["React", "Typescript", "Firebase"],
+    "name": "Sage",
+    "shortDesc": "Sage is a Discord bot used by the University of Delaware’s CIS department to provide a range of tools and utilities that help students. Developed by a team of eight, it includes an improved calendar system with dropdown filtering, calendar switching, and event reminders, along with other student-focused features. The bot was redesigned to improve usability and interaction within the department’s Discord server.",
+    "longDesc": "Sage is a multifunctional Discord bot used within the University of Delaware’s Computer and Information Sciences (CIS) department Discord server to support students with a variety of academic and organizational tools. Rather than focusing solely on scheduling, the bot provides multiple utilities designed to improve student experience and accessibility within the server. A major area of development was the calendar system, which was significantly improved by our team of eight developers. The redesigned system introduced dropdown-based filtering, allowing users to easily browse and select different calendars without needing to repeatedly issue commands. It also supports event reminders, helping students stay on top of important academic dates and deadlines. One of the key technical contributions was the implementation of a paginated dropdown system for Discord interactions. Since Discord limits dropdown menus to 25 items, a custom solution was built to automatically paginate larger datasets and dynamically attach “next” and “previous” navigation buttons, ensuring smooth browsing across large sets of options. The bot was built using Discord.js, Node.js, TypeScript, and MongoDB, and was designed to be modular and extensible so additional student-focused features could be integrated over time.",
+    "techUsed": ["TypeScript", "DiscordJs", "NodeJs", "MongoDB"],
     "siteLink": "",
-    "githubLink": ""
+    "githubLink": "",
+    "featured": true
+  },
+  {
+    "name": "Garden Plot Planner",
+    "shortDesc": "Garden Plot Planner is an Android prototype built with Kotlin and Jetpack Compose that helps users manage plants through seed packet scanning, a simple plant library, and a basic drag-and-drop garden plot planner. The app also includes an early concept for automated watering notifications, though this feature is not fully functional. Built in a team of four, the project focused on mobile UI design and interaction exploration.",
+    "longDesc": "Garden Plot Planner is an Android mobile application prototype developed using Kotlin and Jetpack Compose as part of a team of four. The project explores how mobile tools can assist users in managing gardening tasks through scanning, organization, and planning features. Users can scan seed packets to retrieve basic plant care information and store them in a personal plant library for later reference. The app also includes a simple drag-and-drop garden plot planner, allowing users to visually arrange placeholder plots in a basic layout. An early-stage notification system was designed to generate watering reminders based on scanned plant data, but this feature is not fully functional. Additionally, both the scanning accuracy and data parsing were limited due to the prototype nature of the system. While backend functionality was incomplete, the UI built with Jetpack Compose was a key strength of the project, resulting in a clean and modern mobile interface. The project primarily served as an exploration of mobile UI design and interaction concepts in a gardening context.",
+    "techUsed": ["Kotlin", "Jetpack Compose"],
+    "siteLink": "",
+    "githubLink": "",
+    "featured": false
+  },
+  {
+    "name": "My PL",
+    "shortDesc": "My PL is a React and TypeScript web application that simulates a full 2024/25 Premier League season. Users can simulate all matches in the season using a built-in match simulation algorithm and scheduling system, with results updating the league table dynamically. The project focuses on recreating league progression through full-season simulation.",
+    "longDesc": "My PL is a frontend web application built using React and TypeScript that simulates a full Premier League season (2024/25). The application allows users to simulate every match in the season and observe how the league table evolves based on generated results. It includes a match scheduling system that creates the full fixture list for the season and a match simulation algorithm that determines match outcomes. As matches are simulated, the league table updates dynamically to reflect results across the season. The project is intentionally lightweight and focuses on core simulation logic, scheduling systems, and state-driven UI updates rather than backend infrastructure, serving as an exploration of sports simulation and data-driven UI design.",
+    "techUsed": ["React", "TypeScript"],
+    "siteLink": "",
+    "githubLink": "",
+    "featured": false
   }
 ]

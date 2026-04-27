@@ -11,7 +11,9 @@ import {
   Html5,
   Java,
   Javascript,
+  JetpackCompose,
   Linkedin,
+  Mongodb,
   Nestjs,
   Nodedotjs,
   Prisma,
@@ -71,6 +73,13 @@ export function findIcon(
           className={`${sizeClasses[size]}`}
         />
       );
+    case "tanstack query":
+      return (
+        <img
+          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tanstack/default.svg"
+          className={`${sizeClasses[size]}`}
+        />
+      );
     case "prisma":
       return (
         <Prisma
@@ -83,6 +92,8 @@ export function findIcon(
       return <Express className={`${sizeClasses[size]}`} />;
     case "zustand":
       return <img src={zustand} className={`${sizeClasses[size]}`} />;
+    case "jetpack compose":
+      return <JetpackCompose className={`${sizeClasses[size]}`} />;
 
     // Database
 
@@ -95,13 +106,15 @@ export function findIcon(
           className={`${sizeClasses[size]}`}
         />
       );
-    case "postgres":
+    case "postgresql":
       return (
         <img
           src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/postgresql/default.svg"
           className={`${sizeClasses[size]}`}
         />
       );
+    case "mongodb":
+      return <Mongodb className={`${sizeClasses[size]}`} />;
 
     // Tools/Software
 

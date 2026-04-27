@@ -16,11 +16,15 @@ export function FeaturedProjects() {
         />
       </div>
       <div className="grid sm:grid-cols-2 gap-10 justify-items-center lg:justify-items-start ">
-        {filteredProjects.map((project) => (
-          <div className="even:justify-self-end">
-            <ProjectCard project={project} />
-          </div>
-        ))}
+        {filteredProjects.map((project) => {
+          if (!project.featured) return null;
+
+          return (
+            <div className="even:justify-self-end">
+              <ProjectCard project={project} />
+            </div>
+          );
+        })}
         {!filteredProjects.length && (
           <p className="w-full text-gray-700">No Projects Found!</p>
         )}
