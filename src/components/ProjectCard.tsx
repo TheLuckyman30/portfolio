@@ -29,7 +29,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
       {showLinks && (
         <div className="flex items-center gap-5 p-2 border-t border-gray-300 bg-gray-50">
           {project.githubLink !== "" && (
-            <a href={project.githubLink} target="_blank">
+            <a
+              href={project.githubLink}
+              target="_blank"
+              className="hover:scale-105 duration-75"
+            >
               {findIcon("github", "lg")}
             </a>
           )}
@@ -37,7 +41,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <a
               href={project.siteLink}
               target="_blank"
-              className="text-gray-400"
+              className="text-gray-400 hover:scale-105 duration-75"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
