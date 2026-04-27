@@ -11,13 +11,16 @@ import {
   Html5,
   Java,
   Javascript,
+  JetpackCompose,
   Linkedin,
+  Mongodb,
   Nestjs,
   Nodedotjs,
   Prisma,
   Python,
   React,
   Typescript,
+  VisualStudioCode,
   Vite,
 } from "@thesvg/react";
 import zustand from "../../assets/svgs/zustand.svg";
@@ -64,7 +67,21 @@ export function findIcon(
 
     case "react":
       return <React className={`${sizeClasses[size]}`} />;
+    case "tanstack":
+      return (
+        <img
+          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tanstack/default.svg"
+          className={`${sizeClasses[size]}`}
+        />
+      );
     case "tanstack start":
+      return (
+        <img
+          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tanstack/default.svg"
+          className={`${sizeClasses[size]}`}
+        />
+      );
+    case "tanstack query":
       return (
         <img
           src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tanstack/default.svg"
@@ -83,6 +100,8 @@ export function findIcon(
       return <Express className={`${sizeClasses[size]}`} />;
     case "zustand":
       return <img src={zustand} className={`${sizeClasses[size]}`} />;
+    case "jetpack compose":
+      return <JetpackCompose className={`${sizeClasses[size]}`} />;
 
     // Database
 
@@ -95,13 +114,15 @@ export function findIcon(
           className={`${sizeClasses[size]}`}
         />
       );
-    case "postgres":
+    case "postgresql":
       return (
         <img
           src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/postgresql/default.svg"
           className={`${sizeClasses[size]}`}
         />
       );
+    case "mongodb":
+      return <Mongodb className={`${sizeClasses[size]}`} />;
 
     // Tools/Software
 
@@ -115,10 +136,14 @@ export function findIcon(
       );
     case "vite":
       return <Vite className={`${sizeClasses[size]}`} />;
+    case "vscode":
+      return <VisualStudioCode className={`${sizeClasses[size]}`} />;
     case "nodejs":
       return <Nodedotjs className={`${sizeClasses[size]}`} />;
     case "discordjs":
       return <Discorddotjs className={`${sizeClasses[size]}`} />;
+
+    // Contacts
     case "linkedin":
       return (
         <Linkedin
