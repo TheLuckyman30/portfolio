@@ -13,7 +13,7 @@
       "Prisma",
       "PostgreSQL"
     ],
-    "siteLink": "",
+    "siteLink": "https://selinabacaz.github.io/CapstoneDyslexease/",
     "githubLink": "https://github.com/selinAbacaz/CapstoneDyslexease",
     "imagePath": "/src/assets/images/test.png",
     "featured": true
@@ -31,7 +31,7 @@
       "Prisma",
       "PostgreSQL"
     ],
-    "siteLink": "",
+    "siteLink": "https://f25-cisc474-red.bnauta0.workers.dev/",
     "githubLink": "",
     "imagePath": "/src/assets/images/goldfish-brain.png",
     "featured": true
@@ -41,8 +41,8 @@
     "shortDesc": "Career Chef is a frontend-only web app that helps users explore career paths. Users take either a basic or detailed quiz, and the app uses the GPT API to generate personalized career suggestions based on their answers. Built in a team of three.",
     "longDesc": "Career Chef is a frontend application designed to help users discover potential career options through interactive quizzes. Users can choose between two quiz types—basic or detailed—depending on how in-depth they want their experience to be. After completing the quiz, their responses are processed through the GPT API, which generates tailored career recommendations. The project was developed collaboratively by a team of three and focuses on combining simple UX with AI-driven personalization. Built using React and TypeScript, the application is hosted on GitHub and emphasizes accessibility, responsiveness, and meaningful AI-generated feedback for users exploring career options.",
     "techUsed": ["React", "TypeScript"],
-    "siteLink": "",
-    "githubLink": "",
+    "siteLink": "https://selinabacaz.github.io/starter_helpi/",
+    "githubLink": "https://github.com/selinAbacaz/starter_helpi",
     "imagePath": "/src/assets/images/career-chef.png",
     "featured": true
   },
@@ -52,7 +52,7 @@
     "longDesc": "Sage is a multifunctional Discord bot used within the University of Delaware’s Computer and Information Sciences (CIS) department Discord server to support students with a variety of academic and organizational tools. Rather than focusing solely on scheduling, the bot provides multiple utilities designed to improve student experience and accessibility within the server. A major area of development was the calendar system, which was significantly improved by our team of eight developers. The redesigned system introduced dropdown-based filtering, allowing users to easily browse and select different calendars without needing to repeatedly issue commands. It also supports event reminders, helping students stay on top of important academic dates and deadlines. One of the key technical contributions was the implementation of a paginated dropdown system for Discord interactions. Since Discord limits dropdown menus to 25 items, a custom solution was built to automatically paginate larger datasets and dynamically attach “next” and “previous” navigation buttons, ensuring smooth browsing across large sets of options. The bot was built using Discord.js, Node.js, TypeScript, and MongoDB, and was designed to be modular and extensible so additional student-focused features could be integrated over time.",
     "techUsed": ["TypeScript", "DiscordJs", "NodeJs", "MongoDB"],
     "siteLink": "",
-    "githubLink": "",
+    "githubLink": "https://github.com/CISC375/SageTeamX",
     "imagePath": "/src/assets/images/sage.png",
     "featured": true
   },
@@ -62,7 +62,7 @@
     "longDesc": "Garden Plot Planner is an Android mobile application prototype developed using Kotlin and Jetpack Compose as part of a team of four. The project explores how mobile tools can assist users in managing gardening tasks through scanning, organization, and planning features. Users can scan seed packets to retrieve basic plant care information and store them in a personal plant library for later reference. The app also includes a simple drag-and-drop garden plot planner, allowing users to visually arrange placeholder plots in a basic layout. An early-stage notification system was designed to generate watering reminders based on scanned plant data, but this feature is not fully functional. Additionally, both the scanning accuracy and data parsing were limited due to the prototype nature of the system. While backend functionality was incomplete, the UI built with Jetpack Compose was a key strength of the project, resulting in a clean and modern mobile interface. The project primarily served as an exploration of mobile UI design and interaction concepts in a gardening context.",
     "techUsed": ["Kotlin", "Jetpack Compose"],
     "siteLink": "",
-    "githubLink": "",
+    "githubLink": "https://github.com/TheLuckyman30/GardenPlanner",
     "imagePath": "/src/assets/images/garden-plot-planner.png",
     "featured": false
   },
@@ -72,7 +72,7 @@
     "longDesc": "My PL is a frontend web application built using React and TypeScript that simulates a full Premier League season (2024/25). The application allows users to simulate every match in the season and observe how the league table evolves based on generated results. It includes a match scheduling system that creates the full fixture list for the season and a match simulation algorithm that determines match outcomes. As matches are simulated, the league table updates dynamically to reflect results across the season. The project is intentionally lightweight and focuses on core simulation logic, scheduling systems, and state-driven UI updates rather than backend infrastructure, serving as an exploration of sports simulation and data-driven UI design.",
     "techUsed": ["React", "TypeScript"],
     "siteLink": "",
-    "githubLink": "",
+    "githubLink": "https://github.com/TheLuckyman30/My-PL",
     "imagePath": "/src/assets/images/test.png",
     "featured": false
   }
