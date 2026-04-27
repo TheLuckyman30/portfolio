@@ -20,6 +20,7 @@ import {
   Python,
   React,
   Typescript,
+  VisualStudioCode,
   Vite,
 } from "@thesvg/react";
 import zustand from "../../assets/svgs/zustand.svg";
@@ -66,6 +67,13 @@ export function findIcon(
 
     case "react":
       return <React className={`${sizeClasses[size]}`} />;
+    case "tanstack":
+      return (
+        <img
+          src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tanstack/default.svg"
+          className={`${sizeClasses[size]}`}
+        />
+      );
     case "tanstack start":
       return (
         <img
@@ -128,10 +136,14 @@ export function findIcon(
       );
     case "vite":
       return <Vite className={`${sizeClasses[size]}`} />;
+    case "vscode":
+      return <VisualStudioCode className={`${sizeClasses[size]}`} />;
     case "nodejs":
       return <Nodedotjs className={`${sizeClasses[size]}`} />;
     case "discordjs":
       return <Discorddotjs className={`${sizeClasses[size]}`} />;
+
+    // Contacts
     case "linkedin":
       return (
         <Linkedin

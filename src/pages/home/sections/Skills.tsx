@@ -25,20 +25,22 @@ const skillsCategories: SkillCategory[] = [
     name: "Frameworks/Libraries",
     skills: [
       "React",
-      "Tanstack Start",
+      "Tanstack",
       "Prisma",
       "NestJs",
       "ExpressJs",
       "Zustand",
+      "DiscordJs",
+      "Jetpack Compose",
     ],
   },
   {
     name: "Database",
-    skills: ["SQL", "PostgreSQL", "Supabase"],
+    skills: ["SQL", "PostgreSQL", "Supabase", "MongoDB"],
   },
   {
     name: "Tools/Software",
-    skills: ["Git", "Github", "Vite", "Android Studio"],
+    skills: ["Git", "Github", "NodeJs", "Vite", "VSCode", "Android Studio"],
   },
 ];
 
