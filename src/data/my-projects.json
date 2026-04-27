@@ -15,6 +15,7 @@
     ],
     "siteLink": "",
     "githubLink": "https://github.com/selinAbacaz/CapstoneDyslexease",
+    "imagePath": "/src/assets/images/test.png",
     "featured": true
   },
   {
@@ -32,6 +33,7 @@
     ],
     "siteLink": "",
     "githubLink": "",
+    "imagePath": "/src/assets/images/goldfish-brain.png",
     "featured": true
   },
   {
@@ -41,6 +43,7 @@
     "techUsed": ["React", "TypeScript"],
     "siteLink": "",
     "githubLink": "",
+    "imagePath": "/src/assets/images/career-chef.png",
     "featured": true
   },
   {
@@ -50,6 +53,7 @@
     "techUsed": ["TypeScript", "DiscordJs", "NodeJs", "MongoDB"],
     "siteLink": "",
     "githubLink": "",
+    "imagePath": "/src/assets/images/sage.png",
     "featured": true
   },
   {
@@ -59,6 +63,7 @@
     "techUsed": ["Kotlin", "Jetpack Compose"],
     "siteLink": "",
     "githubLink": "",
+    "imagePath": "/src/assets/images/garden-plot-planner.png",
     "featured": false
   },
   {
@@ -68,6 +73,7 @@
     "techUsed": ["React", "TypeScript"],
     "siteLink": "",
     "githubLink": "",
+    "imagePath": "/src/assets/images/test.png",
     "featured": false
   }
 ]

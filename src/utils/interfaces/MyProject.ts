@@ -5,5 +5,6 @@ export interface MyProject {
   techUsed: string[];
   siteLink: string;
   githubLink: string;
+  imagePath: string;
   featured: boolean;
 }
