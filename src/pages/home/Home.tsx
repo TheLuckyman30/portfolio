@@ -1,6 +1,6 @@
 import { FeaturedProjects, Introduction, Skills } from "./sections";
 import { ContactMe } from "./sections/ContactMe";
-import picOfMe from "../../assets/images/me.png";
+import picOfMe from "../../../public/images/me.png";
 import { Sidebar } from "../../components/Sidebar";
 import { useRef } from "react";
 
