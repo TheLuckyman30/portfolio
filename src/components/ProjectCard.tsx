@@ -18,7 +18,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="p-2 px-5 grow text-sm">{project.shortDesc}</div>
       <div className="flex flex-wrap gap-2 p-2">
         {project.techUsed.map((tech) => (
-          <Chip>
+          <Chip key={tech}>
             <div className="flex items-center gap-2">
               {findIcon(tech, "sm")}
               {tech}

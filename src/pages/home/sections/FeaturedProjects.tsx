@@ -20,7 +20,7 @@ export function FeaturedProjects() {
           if (!project.featured) return null;
 
           return (
-            <div className="even:justify-self-end">
+            <div key={project.name} className="even:justify-self-end">
               <ProjectCard project={project} />
             </div>
           );
