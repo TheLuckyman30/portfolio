@@ -20,6 +20,7 @@ export function Footer() {
           {contacts.map((contact) => (
             <a
               href={contact.link}
+              key={contact.name}
               target="_blank"
               className="flex flex-col gap-2 items-center cursor-pointer hover:scale-110 duration-75 p-1"
             >
