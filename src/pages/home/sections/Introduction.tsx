@@ -1,6 +1,6 @@
 export function Introduction() {
   return (
-    <p className="text-sm sm:text-lg text-gray-700 text-justify">
+    <p id="intro" className="text-sm sm:text-lg text-gray-700 text-justify">
       Hello! My name is Brandon Nauta, and I am a senior majoring in Computer
       Science at the University of Delaware. I am a passionate developer with a
       strong interest in web development and software engineering, and I enjoy
