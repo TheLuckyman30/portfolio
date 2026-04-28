@@ -15,7 +15,7 @@
     ],
     "siteLink": "https://selinabacaz.github.io/CapstoneDyslexease/",
     "githubLink": "https://github.com/selinAbacaz/CapstoneDyslexease",
-    "imagePath": "/images/test.png",
+    "imagePath": "./images/test.png",
     "featured": true
   },
   {
@@ -33,7 +33,7 @@
     ],
     "siteLink": "https://f25-cisc474-red.bnauta0.workers.dev/",
     "githubLink": "",
-    "imagePath": "/images/goldfish-brain.png",
+    "imagePath": "./images/goldfish-brain.png",
     "featured": true
   },
   {
@@ -43,7 +43,7 @@
     "techUsed": ["React", "TypeScript"],
     "siteLink": "https://selinabacaz.github.io/starter_helpi/",
     "githubLink": "https://github.com/selinAbacaz/starter_helpi",
-    "imagePath": "/images/career-chef.png",
+    "imagePath": "./images/career-chef.png",
     "featured": true
   },
   {
@@ -53,7 +53,7 @@
     "techUsed": ["TypeScript", "DiscordJs", "NodeJs", "MongoDB"],
     "siteLink": "https://ud-cis-discord.github.io/sage_info/",
     "githubLink": "https://github.com/CISC375/SageTeamX",
-    "imagePath": "/images/sage.png",
+    "imagePath": "./images/sage.png",
     "featured": true
   },
   {
@@ -63,7 +63,7 @@
     "techUsed": ["Kotlin", "Jetpack Compose"],
     "siteLink": "https://youtu.be/8y7Pyw7kGuI",
     "githubLink": "https://github.com/TheLuckyman30/GardenPlanner",
-    "imagePath": "/images/garden-plot-planner.png",
+    "imagePath": "./images/garden-plot-planner.png",
     "featured": false
   },
   {
@@ -73,7 +73,7 @@
     "techUsed": ["React", "TypeScript"],
     "siteLink": "",
     "githubLink": "https://github.com/TheLuckyman30/My-PL",
-    "imagePath": "/images/test.png",
+    "imagePath": "./images/test.png",
     "featured": false
   }
 ]
