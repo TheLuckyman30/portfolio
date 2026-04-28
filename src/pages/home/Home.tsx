@@ -21,10 +21,13 @@ export function Home() {
   return (
     <>
       <section
-        id="sections"
+        id="all-sections"
         className="flex flex-col justify-center items-center p-5"
       >
-        <section className="flex font-montserrat gap-5 items-center min-h-screen">
+        <section
+          id="landing"
+          className="flex font-montserrat gap-5 items-center min-h-screen"
+        >
           <div
             className="rounded-full shadow-xl h-25 w-25 bg-gray-200 md:h-55 md:w-55 bg-cover"
             style={{ backgroundImage: `url(${picOfMe})` }}
@@ -38,7 +41,10 @@ export function Home() {
             </p>
           </div>
         </section>
-        <div className="flex flex-col gap-50 mx-auto w-full sm:max-w-5xl px-5 h-fit">
+        <div
+          id="main-sections-container"
+          className="flex flex-col gap-50 mx-auto w-full sm:max-w-5xl px-5 h-fit"
+        >
           {sections.map((section) => (
             <section
               id={section.id}
