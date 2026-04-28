@@ -2,6 +2,7 @@ import { FeaturedProjects, Introduction, Skills } from "./sections";
 import { ContactMe } from "./sections/ContactMe";
 import picOfMe from "../../assets/images/me.png";
 import { Sidebar } from "../../components/Sidebar";
+import { useRef } from "react";
 
 const sections = [
   { id: "introduction", name: "Introduction", element: <Introduction /> },
@@ -15,6 +16,8 @@ const sections = [
 ];
 
 export function Home() {
+  const refs = useRef<Record<string, HTMLElement | null>>({});
+
   return (
     <>
       <section
@@ -36,29 +39,34 @@ export function Home() {
           </div>
         </section>
         <div className="flex flex-col gap-50 mx-auto w-full sm:max-w-5xl px-5 h-fit">
-          {sections.map(({ id, name, element }) => (
+          {sections.map((section) => (
             <section
-              id={id}
-              key={id}
+              id={section.id}
+              ref={(element) => {
+                refs.current[section.id] = element;
+              }}
+              key={section.id}
               className="flex flex-col gap-10 scroll-m-30"
             >
               <h1 className="font-semibold font-montserrat text-center text-xl sm:text-3xl text-blue-500">
-                {name}
+                {section.name}
               </h1>
-              {element}
+              {section.element}
             </section>
           ))}
         </div>
       </section>
       <Sidebar>
-        {sections.map(({ id, name }) => (
-          <a
-            className="flex hover:text-blue-500 hover:scale-105 duration-75 2xl:p-1"
-            href={`#${id}`}
-            key={id}
+        {sections.map((section) => (
+          <button
+            className="flex hover:text-blue-500 hover:scale-105 duration-75 2xl:p-1 cursor-pointer"
+            key={section.id}
+            onClick={() => {
+              refs.current[section.id]?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
-            {name}
-          </a>
+            {section.name}
+          </button>
         ))}
       </Sidebar>
     </>
