@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { TextButton, Navbar, Footer } from "./components";
-import { Introduction, Skills, Projects, ContactMe } from "./sections";
-import picOfMe from "./assets/images/me.png";
+import { Introduction, Skills, Projects, ContactMe, Home } from "./sections";
 import "./App.css";
 
 const sections = [
@@ -29,30 +28,11 @@ function App() {
         ))}
       </Navbar>
       <section
-        id="all-sections"
-        className="flex flex-col justify-center items-center p-5"
+        id="sections"
+        className="flex flex-col mx-auto w-full sm:max-w-5xl px-5 h-fit"
       >
-        <section
-          id="landing"
-          className="flex font-montserrat gap-5 items-center min-h-screen"
-        >
-          <div
-            className="rounded-full shadow-xl h-25 w-25 bg-gray-200 md:h-55 md:w-55 bg-cover"
-            style={{ backgroundImage: `url(${picOfMe})` }}
-          />
-          <div>
-            <p className="font-semibold text-2xl sm:text-4xl md:text-6xl">
-              Brandon Nauta
-            </p>
-            <p className="text-xl sm:text-2xl md:text-3xl text-blue-700">
-              Software Engineer
-            </p>
-          </div>
-        </section>
-        <div
-          id="main-sections-container"
-          className="flex flex-col gap-50 mx-auto w-full sm:max-w-5xl px-5 h-fit"
-        >
+        <Home />
+        <div className="flex flex-col gap-50 ">
           {sections.map((section) => (
             <section
               id={section.id}
