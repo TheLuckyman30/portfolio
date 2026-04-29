@@ -1,4 +1,4 @@
-export function Introduction() {
+export function About() {
   return (
     <p className="text-sm sm:text-lg text-gray-700 text-justify">
       Hello! My name is Brandon Nauta, and I am a senior majoring in Computer
