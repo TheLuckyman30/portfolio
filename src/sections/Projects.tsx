@@ -3,7 +3,7 @@ import { Input, ProjectCard } from "../components";
 import { filterProjects } from "../utils";
 import projects from "../data/my-projects.json";
 
-export function FeaturedProjects() {
+export function Projects() {
   const [searchValue, setSearchValue] = useState<string>("");
   const filteredProjects = filterProjects(projects, searchValue);
 

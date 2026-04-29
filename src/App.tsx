@@ -1,17 +1,13 @@
 import { useRef } from "react";
 import { TextButton, Navbar, Footer } from "./components";
-import { Introduction, Skills, FeaturedProjects, ContactMe } from "./sections";
+import { Introduction, Skills, Projects, ContactMe } from "./sections";
 import picOfMe from "./assets/images/me.png";
 import "./App.css";
 
 const sections = [
   { id: "introduction", name: "Introduction", element: <Introduction /> },
+  { id: "projects", name: "Projects", element: <Projects /> },
   { id: "skills", name: "Skills", element: <Skills /> },
-  {
-    id: "featured-projects",
-    name: "Featured Projects",
-    element: <FeaturedProjects />,
-  },
   { id: "contact-me", name: "Contact Me", element: <ContactMe /> },
 ];
 
@@ -66,7 +62,7 @@ function App() {
               key={section.id}
               className="flex flex-col gap-10 scroll-m-30"
             >
-              <h1 className="font-semibold font-montserrat text-center text-xl sm:text-3xl text-blue-500">
+              <h1 className="font-semibold font-montserrat text-center text-2xl sm:text-4xl text-blue-500">
                 {section.name}
               </h1>
               {section.element}
