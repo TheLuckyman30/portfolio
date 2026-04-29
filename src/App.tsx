@@ -29,7 +29,7 @@ function App() {
       </Navbar>
       <section
         id="sections"
-        className="flex flex-col mx-auto w-full sm:max-w-5xl px-5 h-fit"
+        className="flex flex-col mx-auto mb-5 w-full sm:max-w-5xl px-5 h-fit"
       >
         <Home />
         <div className="flex flex-col gap-50 ">
