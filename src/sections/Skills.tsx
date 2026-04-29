@@ -1,5 +1,4 @@
-import { Chip } from "../../../components";
-import { findIcon } from "../../../components";
+import { Chip, findIcon } from "../components";
 
 interface SkillCategory {
   name: string;

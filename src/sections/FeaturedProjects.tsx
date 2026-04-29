@@ -1,7 +1,7 @@
-import { Input, ProjectCard } from "../../../components";
 import { useState } from "react";
-import { filterProjects } from "../../../utils";
-import projects from "../../../data/my-projects.json";
+import { Input, ProjectCard } from "../components";
+import { filterProjects } from "../utils";
+import projects from "../data/my-projects.json";
 
 export function FeaturedProjects() {
   const [searchValue, setSearchValue] = useState<string>("");

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Input, Textarea } from "../../../components";
+import { Input, Textarea, Button } from "../components";
 
 interface ContactFormInput {
   name: string;
