@@ -20,7 +20,7 @@ export function Home() {
         />
       </div>
       <div className="relative min-h-screen z-5 flex flex-col lg:flex-row font-montserrat gap-15 lg:gap-5 justify-center lg:justify-between items-center sm:max-w-7xl mx-auto p-5">
-        <div className="w-full sm:max-w-[70%] lg:flex-1 order-2 lg:order-1 font-roboto bg-linear-65 from-purple-500 to-blue-500 shadow-md text-white rounded-md p-3 text-shadow-md">
+        <div className="w-full sm:max-w-[70%] lg:flex-1 order-2 lg:order-1 font-roboto bg-linear-65 from-purple-500 to-blue-500 shadow-md text-white rounded-md p-3 text-shadow-md animate-drop-in">
           <span className="text-lg sm:text-xl font-bold">Hi There!</span>
           <br></br>
           <br></br>
@@ -37,7 +37,7 @@ export function Home() {
             problem-solving.
           </p>
         </div>
-        <div className="flex order-1 lg:order-2 lg:flex-2 gap-5 items-center justify-center">
+        <div className="flex order-1 lg:order-2 lg:flex-2 gap-5 items-center justify-center animate-slide-in">
           <div
             className="rounded-full shadow-xl h-25 w-25 bg-gray-200 md:h-45 md:w-45 bg-cover"
             style={{ backgroundImage: `url(${picOfMe})` }}
@@ -46,8 +46,9 @@ export function Home() {
             <p className="font-semibold text-2xl sm:text-4xl md:text-5xl">
               Brandon Nauta
             </p>
-            <p className="text-xl sm:text-2xl md:text-3xl text-blue-700">
-              Software Engineer
+            <p className="text-xl font-medium sm:text-2xl md:text-3xl text-gray-700">
+              <span>Software</span>{" "}
+              <span className="text-blue-700">Engineer</span>
             </p>
           </div>
         </div>
