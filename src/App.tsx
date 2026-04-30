@@ -4,8 +4,8 @@ import { About, Skills, Projects, ContactMe, Home } from "./sections";
 import "./App.css";
 
 const sections = [
-  { id: "about", name: "About", element: <About /> },
   { id: "projects", name: "Projects", element: <Projects /> },
+  { id: "about", name: "About", element: <About /> },
   { id: "skills", name: "Skills", element: <Skills /> },
   { id: "contact-me", name: "Contact Me", element: <ContactMe /> },
 ];

@@ -45,10 +45,10 @@ const skillsCategories: SkillCategory[] = [
 
 export function Skills() {
   return (
-    <div className="flex flex-col gap-10 bg-linear-65 from-purple-500 to-blue-500 p-3 rounded-md shadow-xl">
+    <div className="flex flex-col gap-10 bg-purple-500 p-3 rounded-md shadow-xl">
       {skillsCategories.map((category) => (
         <div key={category.name} className="flex flex-col gap-5">
-          <h2 className="text-lg text-white font-medium">{category.name}</h2>
+          <h2 className="text-lg font-medium">{category.name}</h2>
           <div className="flex flex-wrap gap-2">
             {category.skills.map((skill) => (
               <Chip key={skill} size={"md"}>
