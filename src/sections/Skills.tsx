@@ -44,23 +44,57 @@ const skillsCategories: SkillCategory[] = [
 ];
 
 export function Skills() {
+  const test = (skill: string) => {
+    return (
+      <div className="flex flex-col items-center">
+        <span className="text-[.9rem]">{skill}</span>
+        <div>{findIcon(skill, "twoxl")}</div>
+      </div>
+    );
+  };
+
   return (
-    <div className="flex flex-col gap-10 bg-purple-500 p-3 rounded-md shadow-xl">
-      {skillsCategories.map((category) => (
-        <div key={category.name} className="flex flex-col gap-5">
-          <h2 className="text-lg font-medium">{category.name}</h2>
-          <div className="flex flex-wrap gap-2">
-            {category.skills.map((skill) => (
-              <Chip key={skill} size={"md"}>
-                <div className="flex items-center gap-2">
-                  {findIcon(skill, "md")}
-                  {skill}
-                </div>
-              </Chip>
-            ))}
+    <div className="flex flex-col gap-1 w-full overflow-hidden">
+      {skillsCategories.map((category, index) => {
+        const animationClass =
+          index % 2 === 0 ? "animate-slide-left" : "animate-slide-right";
+        const paddingClass = index % 2 === 0 ? "pr-1" : "pl-1";
+        const sharedClasses = `flex gap-1 ${animationClass} ${paddingClass}`;
+
+        return (
+          <div className="flex" key={category.name}>
+            <div className={sharedClasses}>
+              {category.skills.map((skill) => (
+                <Chip key={skill}>{test(skill)}</Chip>
+              ))}
+            </div>
+
+            <div className={sharedClasses}>
+              {category.skills.map((skill) => (
+                <Chip key={skill}>{test(skill)}</Chip>
+              ))}
+            </div>
+
+            <div className={sharedClasses}>
+              {category.skills.map((skill) => (
+                <Chip key={skill}>{test(skill)}</Chip>
+              ))}
+            </div>
+
+            <div className={sharedClasses}>
+              {category.skills.map((skill) => (
+                <Chip key={skill}>{test(skill)}</Chip>
+              ))}
+            </div>
+
+            <div className={`flex gap-1 ${animationClass}`}>
+              {category.skills.map((skill) => (
+                <Chip key={skill}>{test(skill)}</Chip>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

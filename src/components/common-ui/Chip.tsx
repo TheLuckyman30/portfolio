@@ -26,7 +26,7 @@ export function Chip({
   return (
     <div
       {...divProps}
-      className={`p-1 border shdadow-md rounded-md text-center sm:whitespace-nowrap hover:scale-110 duration-75 ${sizeClasses[size]} ${colorClasses[variant]}`}
+      className={`p-1 border h-fit w-fit shdadow-md rounded-md text-center sm:whitespace-nowrap hover:scale-110 duration-75 ${sizeClasses[size]} ${colorClasses[variant]}`}
     >
       {children}
     </div>
