@@ -7,7 +7,7 @@ export function About() {
   ];
 
   return (
-    <div className="text-justify bg-linear-65 from-purple-500 to-blue-500 p-3 rounded-md shadow-md text-white font-medium text-shadow-md ">
+    <div className="sm:text-justify bg-linear-65 from-purple-500 to-blue-500 p-5 sm:p-10 rounded-md shadow-xl text-white font-medium text-shadow-md ">
       {aboutMeText.map((text) => (
         <>
           <p>{text}</p>
