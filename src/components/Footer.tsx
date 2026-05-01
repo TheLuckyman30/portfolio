@@ -24,7 +24,7 @@ export function Footer() {
               target="_blank"
               className="cursor-pointer hover:scale-120 duration-75"
             >
-              {findIcon(contact.name, "md")}
+              {findIcon(contact.name, "lg")}
             </a>
           ))}
         </div>
