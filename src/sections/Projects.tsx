@@ -17,8 +17,6 @@ export function Projects() {
       </div>
       <div className="grid sm:grid-cols-2 gap-10 justify-items-center lg:justify-items-start ">
         {filteredProjects.map((project) => {
-          if (!project.featured) return null;
-
           return (
             <div key={project.name} className="even:justify-self-end">
               <ProjectCard project={project} />
