@@ -27,13 +27,15 @@ import zustand from "../../assets/svgs/zustand.svg";
 
 export function findIcon(
   label: string,
-  size: "xs" | "sm" | "md" | "lg" = "xs",
+  size: "xs" | "sm" | "md" | "lg" | "xl" | "twoxl" = "xs",
 ) {
   const sizeClasses = {
     xs: "w-2 h-2",
     sm: "w-3 h-3",
     md: "w-4 h-4",
     lg: "w-5 h-5",
+    xl: "w-6 h-6",
+    twoxl: "w-8 h-8",
   };
 
   switch (label.toLowerCase()) {

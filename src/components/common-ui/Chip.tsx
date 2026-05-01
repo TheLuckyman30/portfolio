@@ -19,10 +19,14 @@ export function Chip({
     lg: "text-lg",
   };
 
+  const colorClasses = {
+    primary: "bg-gray-50 border-gray-300 text-gray-700",
+  };
+
   return (
     <div
       {...divProps}
-      className={`p-1 ${sizeClasses[size]} bg-gray-50 border border-gray-300 rounded-md text-gray-700 text-center sm:whitespace-nowrap`}
+      className={`p-1 border h-fit w-fit shdadow-md rounded-md text-center whitespace-nowrap hover:scale-110 duration-75 ${sizeClasses[size]} ${colorClasses[variant]}`}
     >
       {children}
     </div>

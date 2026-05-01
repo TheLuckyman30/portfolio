@@ -22,10 +22,9 @@ export function Footer() {
               href={contact.link}
               key={contact.name}
               target="_blank"
-              className="flex flex-col gap-2 items-center cursor-pointer hover:scale-110 duration-75 p-1"
+              className="cursor-pointer hover:scale-120 duration-75"
             >
               {findIcon(contact.name, "md")}
-              <span>{contact.name}</span>
             </a>
           ))}
         </div>
