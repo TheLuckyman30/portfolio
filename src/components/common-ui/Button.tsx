@@ -1,3 +1,5 @@
+import "../../css/components/common-ui/button.css";
+
 interface ButtonProps extends React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
@@ -11,14 +13,11 @@ export function Button({
   ...buttonParams
 }: ButtonProps) {
   const colorClasses = {
-    primary: "bg-blue-700 hover:bg-blue-900 text-white disabled:bg-gray-400",
+    primary: "button-primary-color",
   };
 
   return (
-    <button
-      {...buttonParams}
-      className={`not-disabled:cursor-pointer font-medium text-md p-1.5 rounded-md not-disabled:hover:scale-105 duration-75 whitespace-nowrap ${colorClasses[variant]}`}
-    >
+    <button {...buttonParams} className={`button ${colorClasses[variant]}`}>
       {children}
     </button>
   );
