@@ -15,7 +15,13 @@
 }
 
 .navbar-items {
-  @apply flex w-full mx-auto p-2 gap-6 justify-center items-center;
+  @apply flex 
+  w-full 
+  mx-auto 
+  p-2 
+  gap-6 
+  justify-center 
+  items-center;
 }
 
 @media (min-width: 640px) {

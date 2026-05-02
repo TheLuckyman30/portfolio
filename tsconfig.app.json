@@ -29,7 +29,7 @@
       "@themes/*": ["./src/css/themes/*"],
       "@componentCss/*": ["./src/css/components/*"],
       "@commonUiCss/*": ["./src/css/components/common-ui/*"],
-      "@utils": ["./src/utils/*"]
+      "@utils": ["./src/utils/index.ts"]
     }
   },
   "include": ["src"]
