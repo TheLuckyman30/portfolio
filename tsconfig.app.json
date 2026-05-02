@@ -22,7 +22,14 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@css/*": ["./src/css/*"],
+      "@componentCss/*": ["./src/css/components/*"],
+      "@commonUiCss/*": ["./src/css/components/common-ui/*"],
+      "@utils": ["./src/utils/*"]
+    }
   },
   "include": ["src"]
 }

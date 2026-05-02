@@ -1,4 +1,4 @@
-import "../../css/components/common-ui/button.css";
+import "@commonUiCss/button.css";
 
 interface ButtonProps extends React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,

@@ -8,8 +8,7 @@
 }
 
 .button {
-  @apply relative 
-  cursor-pointer 
+  @apply cursor-pointer 
   font-medium 
   p-1.5 
   rounded-md 

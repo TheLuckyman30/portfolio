@@ -1,0 +1,16 @@
+@reference 'tailwindcss';
+
+.input-primary-color {
+  @apply border-gray-300
+    bg-gray-50;
+}
+
+.input {
+  @apply block 
+    border 
+    p-2.5 
+    rounded-lg 
+    text-sm 
+    w-full 
+    focus:outline-none;
+}
