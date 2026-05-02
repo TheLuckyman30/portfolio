@@ -2,18 +2,21 @@
 
 .chip-primary-color {
   @apply bg-gray-50 
-    border-gray-300 
-    text-gray-700;
+  border-gray-300 
+  text-gray-700;
 }
 
 .chip {
   @apply p-1 
-    border 
-    h-fit 
-    w-fit 
-    rounded-md 
-    text-center 
-    whitespace-nowrap 
-    hover:scale-110 
-    duration-75;
+  border 
+  h-fit 
+  w-fit 
+  rounded-md 
+  text-center 
+  whitespace-nowrap 
+  duration-75;
+}
+
+.chip:hover {
+  @apply scale-110;
 }
