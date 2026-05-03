@@ -1,0 +1,42 @@
+@reference 'tailwindcss';
+@import "@themes/fonts.css";
+
+.main {
+  @apply font-roboto;
+}
+
+.sections {
+  @apply flex
+  flex-col
+  mb-5;
+}
+
+.section {
+  @apply flex 
+  flex-col 
+  gap-50 
+  mx-auto 
+  w-full sm:max-w-5xl 
+  px-5 
+  h-fit;
+}
+
+.section-content {
+  @apply flex 
+  flex-col 
+  gap-10 
+  scroll-m-30;
+}
+
+.section-header {
+  @apply font-bold 
+  font-poppins 
+  text-center 
+  text-4xl sm:text-5xl 
+  text-transparent
+  bg-linear-90
+  from-purple-500
+  to-blue-500
+  pb-2;
+  background-clip: text;
+}

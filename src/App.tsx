@@ -14,7 +14,7 @@ function App() {
   const refs = useRef<Record<string, HTMLElement | null>>({});
 
   return (
-    <main className="font-roboto">
+    <main className="main">
       <Navbar>
         <TextButton
           key="home"
@@ -35,7 +35,7 @@ function App() {
           </TextButton>
         ))}
       </Navbar>
-      <section id="sections" className="flex flex-col mb-5">
+      <section id="sections" className="sections">
         <div
           ref={(element) => {
             refs.current["home"] = element;
@@ -47,7 +47,7 @@ function App() {
             }
           />
         </div>
-        <div className="flex flex-col gap-50 mx-auto w-full sm:max-w-5xl px-5 h-fit">
+        <div className="section">
           {sections.map((section) => (
             <section
               id={section.id}
@@ -55,11 +55,9 @@ function App() {
                 refs.current[section.id] = element;
               }}
               key={section.id}
-              className="flex flex-col gap-10 scroll-m-30"
+              className="section-content"
             >
-              <h1 className="font-bold font-poppins text-center text-4xl sm:text-5xl text-blue-500">
-                {section.name}
-              </h1>
+              <h1 className="section-header">{section.name}</h1>
               {section.element}
             </section>
           ))}
