@@ -1,0 +1,27 @@
+@reference 'tailwindcss';
+
+.text-button-primary-color {
+  @apply text-blue-700;
+}
+
+.text-button {
+  @apply text-xs 
+  p-1 
+  cursor-pointer 
+  font-medium 
+  duration-75 
+  w-fit 
+  select-none    
+  whitespace-nowrap;
+}
+
+.text-button:hover {
+  @apply text-blue-900
+  scale-108;
+}
+
+@media (min-width: 640px) {
+  .text-button {
+    @apply text-lg;
+  }
+}

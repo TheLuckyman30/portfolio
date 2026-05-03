@@ -1,0 +1,32 @@
+@reference 'tailwindcss';
+@import "@themes/fonts.css";
+
+.navbar {
+  @apply font-montserrat 
+  fixed 
+  border-b 
+  bg-white/50 
+  backdrop-blur-sm 
+  border-gray-300 
+  w-screen 
+  h-fit
+  shadow-md 
+  z-10;
+}
+
+.navbar-items {
+  @apply flex 
+  w-full 
+  mx-auto 
+  p-2 
+  gap-6 
+  justify-center 
+  items-center;
+}
+
+@media (min-width: 640px) {
+  .navbar-items {
+    @apply max-w-5xl
+    gap-15;
+  }
+}

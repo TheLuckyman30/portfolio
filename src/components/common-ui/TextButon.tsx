@@ -1,3 +1,5 @@
+import "@commonUiCss/text-button.css";
+
 interface TextButtonProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
@@ -10,13 +12,10 @@ export function TextButton({
   variant = "primary",
   ...divParams
 }: TextButtonProps) {
-  const colorClasses = { primary: "text-blue-700 hover:text-blue-900" };
+  const colorClasses = { primary: "text-button-primary-color" };
 
   return (
-    <div
-      {...divParams}
-      className={`text-xs p-1 sm:text-lg cursor-pointer font-medium duration-75 hover:scale-108 w-fit select-none whitespace-nowrap ${colorClasses[variant]}`}
-    >
+    <div {...divParams} className={`text-button ${colorClasses[variant]}`}>
       {children}
     </div>
   );

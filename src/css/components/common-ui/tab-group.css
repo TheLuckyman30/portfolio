@@ -1,0 +1,15 @@
+@reference 'tailwindcss';
+
+.tab-group-primary-color {
+  @apply bg-black/15;
+}
+
+.tab-group {
+  @apply flex 
+  gap-4 
+  p-1 
+  shadow-md 
+  w-fit 
+  rounded-full 
+  font-semibold;
+}

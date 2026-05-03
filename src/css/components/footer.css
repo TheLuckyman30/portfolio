@@ -1,0 +1,42 @@
+@reference 'tailwindcss';
+
+.footer {
+  @apply flex 
+  w-screen 
+  justify-center 
+  bg-white 
+  border-t 
+  border-gray-300 
+  shadow-[0_-1px_3px_0_rgba(0,0,0,0.1)];
+}
+
+.footer-content {
+  @apply flex 
+  flex-col 
+  w-full 
+  mx-auto 
+  p-5 
+  gap-5 
+  justify-center 
+  items-center;
+}
+
+.footer-contacts {
+  @apply flex 
+  gap-10;
+}
+
+.footer-buttons {
+  @apply cursor-pointer  
+  duration-75;
+}
+
+.footer-buttons:hover {
+  @apply scale-120;
+}
+
+@media (min-width: 640px) {
+  .footer-content {
+    @apply max-w-5xl;
+  }
+}

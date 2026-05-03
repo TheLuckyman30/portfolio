@@ -1,3 +1,5 @@
+import "@commonUiCss/tab.css";
+
 interface TabProps extends React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
@@ -21,7 +23,7 @@ export function Tab({
     isSelected !== undefined &&
     index !== undefined
   ) {
-    const colorClasses = { primary: isSelected ? "bg-white" : "" };
+    const colorClasses = { primary: "tab-primary-color" };
     const changeIndex = () => setSelectedIndex(index);
 
     return (
@@ -31,7 +33,7 @@ export function Tab({
           changeIndex();
           buttonParams.onClick?.(e);
         }}
-        className={`rounded-full px-2 py-0.5 cursor-pointer ${colorClasses[variant]}`}
+        className={`tab ${isSelected ? colorClasses[variant] : ""}`}
       >
         {children}
       </button>

@@ -5,6 +5,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import "@commonUiCss/tab-group.css";
 
 interface TabGroupProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
@@ -30,7 +31,7 @@ export function TabGroup({
   }, [selectedIndex, change]);
 
   const colorClasses = {
-    primary: " bg-black/15 ",
+    primary: "tab-group-primary-color",
   };
 
   const newChildren = Children.map(children, (child, index) => {
@@ -50,10 +51,7 @@ export function TabGroup({
   });
 
   return (
-    <div
-      {...divParams}
-      className={`flex gap-4 p-1 shadow-md w-fit rounded-full font-semibold ${colorClasses[variant]}`}
-    >
+    <div {...divParams} className={`tab-group ${colorClasses[variant]}`}>
       {newChildren}
     </div>
   );

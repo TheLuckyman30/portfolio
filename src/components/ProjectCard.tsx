@@ -1,5 +1,5 @@
 import { Chip, findIcon } from "./common-ui";
-import type { MyProject } from "../utils";
+import type { MyProject } from "@utils";
 
 interface ProjectCardProps {
   project: MyProject;

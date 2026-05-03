@@ -1,0 +1,30 @@
+@reference 'tailwindcss';
+
+.button-primary-color {
+  @apply text-white 
+  bg-linear-65 
+  from-purple-500 
+  to-blue-500;
+}
+
+.button {
+  @apply cursor-pointer 
+  font-medium 
+  p-1.5 
+  rounded-md 
+  duration-75
+  whitespace-nowrap;
+}
+
+.button:hover {
+  @apply scale-103
+  from-purple-600 
+  to-blue-600;
+}
+
+.button:disabled {
+  @apply cursor-auto
+  pointer-events-none
+  bg-none
+  bg-gray-400;
+}

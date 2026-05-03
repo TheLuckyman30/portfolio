@@ -1,3 +1,5 @@
+import "@commonUiCss/text-area.css";
+
 interface TextareaProps extends React.DetailedHTMLProps<
   React.TextareaHTMLAttributes<HTMLTextAreaElement>,
   HTMLTextAreaElement
@@ -9,11 +11,11 @@ export function Textarea({
   variant = "primary",
   ...textareaParams
 }: TextareaProps) {
-  const colorClasses = { primary: "border-gray-300 bg-gray-50" };
+  const colorClasses = { primary: "text-area-primary-color" };
 
   return (
     <textarea
-      className={`block border p-2.5 rounded-lg text-sm w-full focus:outline-none min-h-50 ${colorClasses[variant]}`}
+      className={`text-area ${colorClasses[variant]}`}
       {...textareaParams}
     />
   );

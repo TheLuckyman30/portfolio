@@ -1,3 +1,5 @@
+import "@commonUiCss/chip.css";
+
 interface ChipProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
@@ -20,13 +22,13 @@ export function Chip({
   };
 
   const colorClasses = {
-    primary: "bg-gray-50 border-gray-300 text-gray-700",
+    primary: "chip-primary-color",
   };
 
   return (
     <div
       {...divProps}
-      className={`p-1 border h-fit w-fit shdadow-md rounded-md text-center whitespace-nowrap hover:scale-110 duration-75 ${sizeClasses[size]} ${colorClasses[variant]}`}
+      className={`chip ${sizeClasses[size]} ${colorClasses[variant]}`}
     >
       {children}
     </div>

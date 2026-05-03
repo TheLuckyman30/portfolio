@@ -1,0 +1,32 @@
+@reference 'tailwindcss';
+
+.contact-me-main {
+  @apply flex 
+  justify-center 
+  w-full;
+}
+
+.contact-me-items {
+  @apply flex 
+  flex-col 
+  gap-5 
+  w-full;
+}
+
+.contact-me-form {
+  @apply flex 
+  flex-col 
+  flex-1 
+  gap-2;
+}
+
+.contact-me-form-items {
+  @apply flex 
+  gap-2;
+}
+
+@media (min-width: 640px) {
+  .contact-me-items {
+    width: 70%;
+  }
+}
