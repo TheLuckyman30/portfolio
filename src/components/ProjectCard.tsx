@@ -1,13 +1,28 @@
+import { useEffect, useRef } from "react";
 import { Chip, findIcon } from "./common-ui";
-import type { MyProject } from "@utils";
+import { useIntersection, type MyProject } from "@utils";
 
 interface ProjectCardProps {
   project: MyProject;
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isVisible = useIntersection(ref);
+
+  const updateAnimation = () => {
+    ref.current?.classList.add("animate-drop-in");
+  };
+
+  useEffect(() => {
+    if (isVisible) updateAnimation();
+  }, [isVisible, updateAnimation]);
+
   return (
-    <div className="flex flex-col w-full sm:w-70 lg:w-100 h-full min-h-100 border border-gray-300 rounded-md shadow-md overflow-hidden hover:scale-103 duration-75">
+    <div
+      ref={ref}
+      className="flex flex-col w-full sm:w-70 lg:w-100 h-full min-h-100 border border-gray-300 rounded-md shadow-md overflow-hidden hover:scale-103 duration-75 delay-200"
+    >
       <a
         className="flex flex-col h-full cursor-pointer"
         href={project.siteLink}

@@ -1,3 +1,5 @@
+import { Fragment } from "react/jsx-runtime";
+
 export function About() {
   const aboutMeText = [
     "I am an aspiring software engineer/full-stack developer. I’m currently a senior at the University of Delaware, soon to graduate with a major in Computer Science (BS) and minors in Game Studies and Interactive Media. ",
@@ -8,11 +10,11 @@ export function About() {
 
   return (
     <div className="sm:text-justify bg-linear-65 from-purple-500 to-blue-500 p-5 sm:p-10 rounded-md shadow-xl text-white font-medium text-shadow-md ">
-      {aboutMeText.map((text) => (
-        <>
+      {aboutMeText.map((text, index) => (
+        <Fragment key={index}>
           <p>{text}</p>
           <br className="last:hidden" />
-        </>
+        </Fragment>
       ))}
     </div>
   );
