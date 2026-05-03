@@ -82,6 +82,11 @@
   text-gray-700;
 }
 
+.home-buttons {
+  @apply flex
+  gap-2;
+}
+
 /* sm */
 @media (min-width: 640px) {
   .home-content-box {

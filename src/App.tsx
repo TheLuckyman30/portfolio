@@ -41,7 +41,11 @@ function App() {
             refs.current["home"] = element;
           }}
         >
-          <Home />
+          <Home
+            scrollToContact={() =>
+              refs.current["contact-me"]?.scrollIntoView({ behavior: "smooth" })
+            }
+          />
         </div>
         <div className="flex flex-col gap-50 mx-auto w-full sm:max-w-5xl px-5 h-fit">
           {sections.map((section) => (

@@ -1,8 +1,13 @@
+import { Button, Particles } from "../components";
+import resume from "../assets/files/Resume.pdf";
 import picOfMe from "../assets/images/me.png";
-import { Particles } from "../components";
 import "@sectionsCss/home.css";
 
-export function Home() {
+interface HomeProps {
+  scrollToContact: () => void;
+}
+
+export function Home({ scrollToContact }: HomeProps) {
   return (
     <section id="home" className="home-main">
       <div className="home-particles">
@@ -43,6 +48,16 @@ export function Home() {
               <span>Software</span>{" "}
               <span className="text-blue-700">Engineer</span>
             </p>
+            <div className="home-buttons">
+              <Button variant={"secondary"} onClick={scrollToContact}>
+                Contact Me
+              </Button>
+              <Button variant={"secondary"}>
+                <a href={resume} download="bnauta-resume">
+                  Download My Resume
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
