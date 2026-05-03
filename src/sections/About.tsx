@@ -15,7 +15,7 @@ export function About() {
   ];
 
   return (
-    <div ref={ref} className="about-main">
+    <div ref={ref} className="about-main opacity-0 delay-200">
       {aboutMeText.map((text, index) => (
         <Fragment key={index}>
           <p>{text}</p>

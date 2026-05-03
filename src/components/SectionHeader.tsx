@@ -11,7 +11,7 @@ export function SectionHeader({ sectionName }: SectionHeaderProps) {
   useAnimation(ref, "animate-drop-in");
 
   return (
-    <h1 ref={ref} className="section-header delay-75">
+    <h1 ref={ref} className="section-header opacity-0 delay-75">
       {sectionName}
     </h1>
   );

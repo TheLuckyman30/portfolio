@@ -54,7 +54,7 @@ export function Skills() {
   };
 
   return (
-    <div className="flex flex-col gap-1 w-full overflow-hidden delay-200">
+    <div className="flex flex-col gap-1 w-full overflow-hidden">
       {skillsCategories.map((category, index) => {
         const animationClass =
           index % 2 === 0 ? "animate-slide-left" : "animate-slide-right";
