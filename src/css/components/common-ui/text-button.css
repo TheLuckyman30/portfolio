@@ -1,27 +1,20 @@
 @reference 'tailwindcss';
+@import "@themes/fonts.css";
 
 .text-button-primary-color {
-  @apply text-blue-700;
+  @apply text-blue-500;
 }
 
 .text-button {
-  @apply text-xs 
+  @apply text-xs sm:text-lg
   p-1 
   cursor-pointer 
-  font-medium 
+  font-semibold 
+  font-poppins
   duration-75 
   w-fit 
   select-none    
-  whitespace-nowrap;
-}
-
-.text-button:hover {
-  @apply text-blue-900
-  scale-108;
-}
-
-@media (min-width: 640px) {
-  .text-button {
-    @apply text-lg;
-  }
+  whitespace-nowrap
+  bg-clip-text
+  hover:scale-105;
 }
