@@ -29,6 +29,7 @@
       "@themes/*": ["./src/css/themes/*"],
       "@componentCss/*": ["./src/css/components/*"],
       "@commonUiCss/*": ["./src/css/components/common-ui/*"],
+      "@sectionsCss/*": ["./src/css/sections/*"],
       "@utils": ["./src/utils/index.ts"]
     }
   },

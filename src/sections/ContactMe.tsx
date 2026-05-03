@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input, Textarea, Button } from "../components";
 import { useForm, useSendMessage } from "@utils";
+import "@sectionsCss/contact-me.css";
 
 export function ContactMe() {
   const { formInputs, updateFormInput, resetFormInputs } = useForm({
@@ -11,7 +12,7 @@ export function ContactMe() {
   });
   const [test, setTest] = useState<boolean>(false);
 
-  const { result, sendMessage } = useSendMessage({
+  const { result, error, sendMessage } = useSendMessage({
     onSuccess: () => {
       resetFormInputs();
       setTest(true);
@@ -20,11 +21,11 @@ export function ContactMe() {
   });
 
   return (
-    <div className="flex justify-center w-full">
-      <div className="flex flex-col gap-5 w-full sm:w-[70%]">
+    <div className="contact-me-main">
+      <div className="contact-me-items">
         {test && <div>{result}</div>}
-        <form className="flex flex-col flex-1 gap-2" onSubmit={sendMessage}>
-          <div className="flex gap-2">
+        <form className="contact-me-form" onSubmit={sendMessage}>
+          <div className="contact-me-form-items">
             <Input
               id="contact-me-name"
               name="name"
