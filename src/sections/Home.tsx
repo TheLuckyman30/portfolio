@@ -26,7 +26,7 @@ export function Home({ scrollToContact }: HomeProps) {
         />
       </div>
       <div className="home-content-box">
-        <div className="home-word-box">
+        <div className="home-word-box animate-drop-in">
           <span className="home-word-box-header">Hi There!</span>
           <br></br>
           <br></br>
@@ -37,7 +37,7 @@ export function Home({ scrollToContact }: HomeProps) {
             set through hands-on projects.
           </p>
         </div>
-        <div className="home-side-box">
+        <div className="home-side-box animate-slide-in">
           <div
             className="home-image"
             style={{ backgroundImage: `url(${picOfMe})` }}
