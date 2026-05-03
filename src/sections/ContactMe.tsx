@@ -15,6 +15,30 @@ export function ContactMe() {
     subject: "",
     text: "",
   });
+  const [result, setResult] = useState("");
+
+  const sendMessage = async (event: React.SubmitEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("Sending....");
+    console.log(event.target);
+    const formData = new FormData(event.target);
+    formData.append("access_key", import.meta.env.VITE_FORM_KEY);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      setFormInput({ name: "", email: "", subject: "", text: "" });
+      event.target.reset();
+    } else {
+      setResult("Error");
+    }
+  };
 
   function updateFormInput(
     e:
@@ -23,11 +47,6 @@ export function ContactMe() {
   ) {
     const newFormInput = { ...formInput, [e.target.name]: e.target.value };
     setFormInput(newFormInput);
-  }
-
-  function sendMessage(e: React.SubmitEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setFormInput({ name: "", email: "", subject: "", text: "" });
   }
 
   return (
