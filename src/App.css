@@ -27,16 +27,3 @@
   gap-10 
   scroll-m-30;
 }
-
-.section-header {
-  @apply font-bold 
-  font-poppins 
-  text-center 
-  text-4xl sm:text-5xl 
-  text-transparent
-  bg-linear-90
-  from-pink-400
-  to-orange-300
-  pb-2
-  bg-clip-text;
-}

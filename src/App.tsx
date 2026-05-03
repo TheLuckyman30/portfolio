@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { TextButton, Navbar, Footer } from "./components";
+import { TextButton, Navbar, Footer, SectionHeader } from "./components";
 import { About, Skills, Projects, ContactMe, Home } from "./sections";
 import "./App.css";
 
@@ -11,7 +11,7 @@ const sections = [
 ];
 
 function App() {
-  const refs = useRef<Record<string, HTMLElement | null>>({});
+  const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   return (
     <main className="main">
@@ -19,7 +19,7 @@ function App() {
         <TextButton
           key="home"
           onClick={() =>
-            refs.current["home"]?.scrollIntoView({ behavior: "smooth" })
+            sectionRefs.current["home"]?.scrollIntoView({ behavior: "smooth" })
           }
         >
           Home
@@ -28,7 +28,9 @@ function App() {
           <TextButton
             key={section.id}
             onClick={() =>
-              refs.current[section.id]?.scrollIntoView({ behavior: "smooth" })
+              sectionRefs.current[section.id]?.scrollIntoView({
+                behavior: "smooth",
+              })
             }
           >
             {section.name}
@@ -38,12 +40,14 @@ function App() {
       <section id="sections" className="sections">
         <div
           ref={(element) => {
-            refs.current["home"] = element;
+            sectionRefs.current["home"] = element;
           }}
         >
           <Home
             scrollToContact={() =>
-              refs.current["contact-me"]?.scrollIntoView({ behavior: "smooth" })
+              sectionRefs.current["contact-me"]?.scrollIntoView({
+                behavior: "smooth",
+              })
             }
           />
         </div>
@@ -52,12 +56,12 @@ function App() {
             <section
               id={section.id}
               ref={(element) => {
-                refs.current[section.id] = element;
+                sectionRefs.current[section.id] = element;
               }}
               key={section.id}
               className="section-content"
             >
-              <h1 className="section-header">{section.name}</h1>
+              <SectionHeader sectionName={section.name} />
               {section.element}
             </section>
           ))}

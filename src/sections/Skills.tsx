@@ -44,7 +44,7 @@ const skillsCategories: SkillCategory[] = [
 ];
 
 export function Skills() {
-  const test = (skill: string) => {
+  const renderSkill = (skill: string) => {
     return (
       <div className="flex flex-col items-center">
         <span className="text-[.9rem]">{skill}</span>
@@ -54,7 +54,7 @@ export function Skills() {
   };
 
   return (
-    <div className="flex flex-col gap-1 w-full overflow-hidden">
+    <div className="flex flex-col gap-1 w-full overflow-hidden delay-200">
       {skillsCategories.map((category, index) => {
         const animationClass =
           index % 2 === 0 ? "animate-slide-left" : "animate-slide-right";
@@ -65,31 +65,31 @@ export function Skills() {
           <div className="flex" key={category.name}>
             <div className={sharedClasses}>
               {category.skills.map((skill) => (
-                <Chip key={skill}>{test(skill)}</Chip>
+                <Chip key={skill}>{renderSkill(skill)}</Chip>
               ))}
             </div>
 
             <div className={sharedClasses}>
               {category.skills.map((skill) => (
-                <Chip key={skill}>{test(skill)}</Chip>
+                <Chip key={skill}>{renderSkill(skill)}</Chip>
               ))}
             </div>
 
             <div className={sharedClasses}>
               {category.skills.map((skill) => (
-                <Chip key={skill}>{test(skill)}</Chip>
+                <Chip key={skill}>{renderSkill(skill)}</Chip>
               ))}
             </div>
 
             <div className={sharedClasses}>
               {category.skills.map((skill) => (
-                <Chip key={skill}>{test(skill)}</Chip>
+                <Chip key={skill}>{renderSkill(skill)}</Chip>
               ))}
             </div>
 
             <div className={`flex gap-1 ${animationClass}`}>
               {category.skills.map((skill) => (
-                <Chip key={skill}>{test(skill)}</Chip>
+                <Chip key={skill}>{renderSkill(skill)}</Chip>
               ))}
             </div>
           </div>
