@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Input, Textarea, Button } from "../components";
+import { Input, Textarea, Button, Alert } from "../components";
 import { useForm, useSendMessage } from "@utils";
 import "@sectionsCss/contact-me.css";
 
@@ -23,7 +23,10 @@ export function ContactMe() {
   return (
     <div className="contact-me-main">
       <div className="contact-me-items">
-        {test && <div>{result}</div>}
+        <Alert
+          header="Message Response"
+          message="Your message was sent successfuly!"
+        />
         <form className="contact-me-form" onSubmit={sendMessage}>
           <div className="contact-me-form-items">
             <Input
