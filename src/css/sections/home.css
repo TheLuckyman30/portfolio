@@ -21,7 +21,7 @@
   z-5 
   flex 
   flex-col 
-  font-montserrat 
+  font-poppins 
   gap-15 
   justify-center 
   items-center 
@@ -72,13 +72,14 @@
 }
 
 .home-name {
-  @apply font-semibold 
+  @apply font-bold 
   text-2xl;
 }
 
 .home-descriptors {
   @apply text-xl 
   font-medium 
+  mb-2
   text-gray-700;
 }
 

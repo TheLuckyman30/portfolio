@@ -16,7 +16,6 @@ export function Button({
     primary: "button-primary-color",
     secondary: "button-secondary-color",
   };
-
   return (
     <button {...buttonParams} className={`button ${colorClasses[variant]}`}>
       {children}

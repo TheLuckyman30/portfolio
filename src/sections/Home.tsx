@@ -43,20 +43,26 @@ export function Home({ scrollToContact }: HomeProps) {
             style={{ backgroundImage: `url(${picOfMe})` }}
           />
           <div>
-            <p className="home-name">Brandon Nauta</p>
+            <p className="home-name">
+              <span>Brandon</span> <span className="text-blue-700">Nauta</span>
+            </p>
             <p className="home-descriptors">
               <span>Software</span>{" "}
-              <span className="text-blue-700">Engineer</span>
+              <span className="text-blue-700 font-semibold">Engineer</span>
             </p>
             <div className="home-buttons">
-              <Button variant={"secondary"} onClick={scrollToContact}>
-                Contact Me
-              </Button>
-              <Button variant={"secondary"}>
-                <a href={resume} download="bnauta-resume">
-                  Download My Resume
-                </a>
-              </Button>
+              <div className="w-fit">
+                <Button variant={"secondary"} onClick={scrollToContact}>
+                  Contact Me
+                </Button>
+              </div>
+              <div className="w-fit">
+                <Button>
+                  <a href={resume} download="bnauta-resume">
+                    Resume
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
