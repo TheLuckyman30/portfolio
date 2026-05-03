@@ -7,11 +7,7 @@ export function useAnimation(
 ) {
   const isVisible = useIntersection(ref);
 
-  const updateAnimation = () => {
-    ref.current?.classList.add(animation);
-  };
-
   useEffect(() => {
-    if (isVisible) updateAnimation();
-  }, [isVisible, updateAnimation]);
+    if (isVisible) ref.current?.classList.add(animation);
+  }, [isVisible, animation, ref]);
 }
