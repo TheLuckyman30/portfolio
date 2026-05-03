@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Chip, findIcon } from "./common-ui";
-import { useIntersection, type MyProject } from "@utils";
+import { useAnimation, type MyProject } from "@utils";
 
 interface ProjectCardProps {
   project: MyProject;
@@ -8,15 +8,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isVisible = useIntersection(ref);
-
-  const updateAnimation = () => {
-    ref.current?.classList.add("animate-drop-in");
-  };
-
-  useEffect(() => {
-    if (isVisible) updateAnimation();
-  }, [isVisible, updateAnimation]);
+  useAnimation(ref, "animate-drop-in");
 
   return (
     <div
