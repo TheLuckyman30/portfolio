@@ -4,7 +4,7 @@ interface ButtonProps extends React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > {
-  variant?: "primary";
+  variant?: "primary" | "secondary";
 }
 
 export function Button({
@@ -14,8 +14,8 @@ export function Button({
 }: ButtonProps) {
   const colorClasses = {
     primary: "button-primary-color",
+    secondary: "button-secondary-color",
   };
-
   return (
     <button {...buttonParams} className={`button ${colorClasses[variant]}`}>
       {children}

@@ -11,6 +11,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./"),
       "@css": path.resolve(__dirname, "./src/css"),
       "@themes": path.resolve(__dirname, "./src/css/themes"),
+      "@animations": path.resolve(__dirname, "./src/css/animations"),
       "@componentCss": path.resolve(__dirname, "./src/css/components"),
       "@commonUiCss": path.resolve(__dirname, "./src/css/components/common-ui"),
       "@sectionsCss": path.resolve(__dirname, "./src/css/sections"),

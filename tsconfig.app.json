@@ -27,6 +27,7 @@
       "@/*": ["./src/*"],
       "@css/*": ["./src/css/*"],
       "@themes/*": ["./src/css/themes/*"],
+      "@animations/*": ["./src/css/animations/*"],
       "@componentCss/*": ["./src/css/components/*"],
       "@commonUiCss/*": ["./src/css/components/common-ui/*"],
       "@sectionsCss/*": ["./src/css/sections/*"],
