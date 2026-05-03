@@ -40,8 +40,7 @@
   text-white 
   rounded-md 
   p-3 
-  text-shadow-md 
-  animate-drop-in;
+  text-shadow-md;
 }
 
 .home-word-box-header {
@@ -58,8 +57,7 @@
   order-1 
   gap-5 
   items-center 
-  justify-center 
-  animate-slide-in;
+  justify-center;
 }
 
 .home-image {

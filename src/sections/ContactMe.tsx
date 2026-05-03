@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Input, Textarea, Button, Alert } from "../components";
-import { useForm, useSendMessage } from "@utils";
+import { useAnimation, useForm, useSendMessage } from "@utils";
 import "@sectionsCss/contact-me.css";
 
 export function ContactMe() {
@@ -11,6 +11,8 @@ export function ContactMe() {
     text: "",
   });
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+  useAnimation(ref, "animate-drop-in");
 
   const { result, error, sendMessage } = useSendMessage({
     onSuccess: () => {
@@ -25,7 +27,7 @@ export function ContactMe() {
   });
 
   return (
-    <div className="contact-me-main">
+    <div ref={ref} className="contact-me-main delay-200">
       <div className="contact-me-items">
         {submitted && (
           <Alert
