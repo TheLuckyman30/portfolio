@@ -20,10 +20,11 @@ export function useSendMessage(opts?: {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult("Your message was successfully sent!");
       opts?.onSuccess?.();
     } else {
-      setResult("Error");
+      setResult("There was a problem sending your message.");
+      opts?.onError?.();
     }
   };
 
