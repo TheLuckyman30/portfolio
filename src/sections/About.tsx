@@ -1,6 +1,7 @@
 import { useAnimation } from "@utils";
 import { useRef } from "react";
 import { Fragment } from "react/jsx-runtime";
+import "@sectionsCss/about.css";
 
 export function About() {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -14,10 +15,7 @@ export function About() {
   ];
 
   return (
-    <div
-      ref={ref}
-      className="sm:text-justify bg-linear-65 from-purple-500 to-blue-500 p-5 sm:p-10 rounded-md shadow-xl text-white font-medium text-shadow-md delay-200"
-    >
+    <div ref={ref} className="about-main">
       {aboutMeText.map((text, index) => (
         <Fragment key={index}>
           <p>{text}</p>

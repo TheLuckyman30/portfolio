@@ -4,6 +4,7 @@ export function useIntersection(ref: React.RefObject<HTMLElement | null>) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
+    console.log("animate");
     const element = ref.current;
     const intersectionObserver = new IntersectionObserver(([entry]) => {
       setIsVisible(entry.isIntersecting);
@@ -14,7 +15,7 @@ export function useIntersection(ref: React.RefObject<HTMLElement | null>) {
     return () => {
       if (element) intersectionObserver.unobserve(element);
     };
-  }, []);
+  }, [ref]);
 
   return isVisible;
 }
