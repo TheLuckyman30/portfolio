@@ -9,7 +9,7 @@ export function useSendMessage(opts?: {
 
   const sendMessage = async (event: React.SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setResult("Sending....");
+
     const formData = new FormData(event.target);
     formData.append("access_key", import.meta.env.VITE_FORM_KEY);
 
@@ -21,12 +21,14 @@ export function useSendMessage(opts?: {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Your message was successfully sent!");
-      setError(true);
+      setResult(
+        "Your message was successfully sent! I will get back to you as soon as possible!",
+      );
+      setError(false);
       opts?.onSuccess?.();
     } else {
       setResult("There was a problem sending your message.");
-      setError(false);
+      setError(true);
       opts?.onError?.();
     }
   };

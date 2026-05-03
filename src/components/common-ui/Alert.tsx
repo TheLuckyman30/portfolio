@@ -10,7 +10,7 @@ interface AlertProps extends React.DetailedHTMLProps<
 }
 
 export function Alert({
-  variant = "success",
+  variant = "primary",
   message,
   header,
   ...divParams

@@ -10,23 +10,30 @@ export function ContactMe() {
     subject: "",
     text: "",
   });
-  const [test, setTest] = useState<boolean>(false);
+  const [submitted, setSubmitted] = useState<boolean>(false);
 
   const { result, error, sendMessage } = useSendMessage({
     onSuccess: () => {
       resetFormInputs();
-      setTest(true);
-      setTimeout(() => setTest(false), 3000);
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 5000);
+    },
+    onError: () => {
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 5000);
     },
   });
 
   return (
     <div className="contact-me-main">
       <div className="contact-me-items">
-        <Alert
-          header="Message Response"
-          message="Your message was sent successfuly!"
-        />
+        {submitted && (
+          <Alert
+            variant={error ? "error" : "success"}
+            header="Message Response"
+            message={result}
+          />
+        )}
         <form className="contact-me-form" onSubmit={sendMessage}>
           <div className="contact-me-form-items">
             <Input
