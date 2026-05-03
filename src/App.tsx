@@ -53,7 +53,7 @@ function App() {
               key={section.id}
               className="flex flex-col gap-10 scroll-m-30"
             >
-              <h1 className="font-semibold font-montserrat text-center text-2xl sm:text-4xl text-blue-500">
+              <h1 className="font-semibold font-montserrat text-center text-4xl sm:text-5xl text-blue-500">
                 {section.name}
               </h1>
               {section.element}

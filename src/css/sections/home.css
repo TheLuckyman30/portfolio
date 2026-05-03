@@ -1,0 +1,146 @@
+@reference 'tailwindcss';
+@import "@themes/fonts.css";
+@import "@themes/animations.css";
+
+.home-main {
+  @apply w-full 
+  relative 
+  min-h-screen;
+}
+
+.home-particles {
+  @apply absolute 
+  inset-0 
+  z-0 
+  w-screen;
+}
+
+.home-content-box {
+  @apply relative 
+  min-h-screen 
+  z-5 
+  flex 
+  flex-col 
+  font-montserrat 
+  gap-15 
+  justify-center 
+  items-center 
+  mx-auto 
+  p-5;
+}
+
+.home-word-box {
+  @apply w-full 
+  order-2 
+  font-roboto 
+  bg-linear-65 
+  from-purple-500 
+  to-blue-500 
+  shadow-md 
+  text-white 
+  rounded-md 
+  p-3 
+  text-shadow-md 
+  animate-drop-in;
+}
+
+.home-word-box-header {
+  @apply text-lg  
+  font-bold;
+}
+
+.home-word-box-body {
+  @apply text-sm;
+}
+
+.home-side-box {
+  @apply flex 
+  order-1 
+  gap-5 
+  items-center 
+  justify-center 
+  animate-slide-in;
+}
+
+.home-image {
+  @apply rounded-full 
+  shadow-xl 
+  h-25 
+  w-25 
+  bg-gray-200 
+  bg-cover;
+}
+
+.home-name {
+  @apply font-semibold 
+  text-2xl;
+}
+
+.home-descriptors {
+  @apply text-xl 
+  font-medium 
+  text-gray-700;
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .home-content-box {
+    @apply max-w-7xl;
+  }
+
+  .home-word-box {
+    max-width: 70%;
+  }
+
+  .home-word-box-header {
+    @apply text-xl;
+  }
+
+  .home-word-box-body {
+    @apply text-base;
+  }
+
+  .home-name {
+    @apply text-4xl;
+  }
+
+  .home-descriptors {
+    @apply text-2xl;
+  }
+}
+
+/* md */
+
+@media (min-width: 768px) {
+  .home-image {
+    @apply h-45 
+    w-45;
+  }
+
+  .home-name {
+    @apply text-5xl;
+  }
+
+  .home-descriptors {
+    @apply text-3xl;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .home-content-box {
+    @apply flex-row 
+    justify-between
+    gap-5;
+  }
+
+  .home-word-box {
+    @apply flex-1
+    order-1;
+  }
+
+  .home-side-box {
+    @apply order-2 
+    flex-2;
+  }
+}
