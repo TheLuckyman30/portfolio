@@ -8,6 +8,9 @@ export function useAnimation(
   const isVisible = useIntersection(ref);
 
   useEffect(() => {
-    if (isVisible) ref.current?.classList.add(animation);
+    if (isVisible && ref.current) {
+      ref.current.classList.add(animation);
+      ref.current.style.opacity = "100%";
+    }
   }, [isVisible, animation, ref]);
 }

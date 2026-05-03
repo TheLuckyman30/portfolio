@@ -27,7 +27,7 @@ export function ContactMe() {
   });
 
   return (
-    <div ref={ref} className="contact-me-main delay-200">
+    <div ref={ref} className="contact-me-main opacity-0 delay-200">
       <div className="contact-me-items">
         {submitted && (
           <Alert
