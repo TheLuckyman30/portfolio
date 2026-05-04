@@ -4,9 +4,9 @@
   --animate-slide-left: slideLeft 15s linear infinite;
   --animate-slide-right: slideRight 15s linear infinite;
   --animate-drop-in: dropIn 1s ease-out forwards;
-  --animate-drop-in-delay: dropIn 1.2s ease-out 150ms forwards;
-  --animate-slide-in: slideIn 1.2s ease-out forwards;
-  --animate-slide-in-left: slideInLeft 1.2s ease-out 500ms forwards;
+  --animate-drop-in-delay: dropIn 1.1s ease-out 100ms forwards;
+  --animate-slide-in: slideIn 1s ease-out forwards;
+  --animate-slide-in-left: slideInLeft 1s ease-out 1100ms forwards;
 
   @keyframes slideLeft {
     from {
