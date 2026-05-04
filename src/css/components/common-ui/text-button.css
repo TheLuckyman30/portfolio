@@ -2,7 +2,7 @@
 @import "@themes/fonts.css";
 
 .text-button-primary-color {
-  @apply text-blue-500;
+  @apply text-blue-500 hover:text-blue-700;
 }
 
 .text-button {
