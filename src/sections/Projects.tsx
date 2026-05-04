@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Input, ProjectCard } from "../components";
-import { filterProjects } from "@utils";
+import { filterProjects, useAnimation } from "@utils";
 import projects from "../data/my-projects.json";
 
 export function Projects() {
   const [searchValue, setSearchValue] = useState<string>("");
   const filteredProjects = filterProjects(projects, searchValue);
+  const ref = useRef<HTMLDivElement | null>(null);
+  useAnimation(ref, "animate-slide-in-left");
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="flex w-fit">
+      <div ref={ref} className="flex w-fit opacity-0">
         <Input
           placeholder="Search"
           onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
