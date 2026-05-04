@@ -5,7 +5,7 @@ import "@sectionsCss/about.css";
 
 export function About() {
   const ref = useRef<HTMLDivElement | null>(null);
-  useAnimation(ref, "animate-drop-in");
+  useAnimation(ref, "animate-drop-in-delay");
 
   const aboutMeText = [
     "I am an aspiring software engineer/full-stack developer. I’m currently a senior at the University of Delaware, soon to graduate with a major in Computer Science (BS) and minors in Game Studies and Interactive Media. ",
@@ -15,7 +15,7 @@ export function About() {
   ];
 
   return (
-    <div ref={ref} className="about-main opacity-0 delay-200">
+    <div ref={ref} className="about-main opacity-0">
       {aboutMeText.map((text, index) => (
         <Fragment key={index}>
           <p>{text}</p>

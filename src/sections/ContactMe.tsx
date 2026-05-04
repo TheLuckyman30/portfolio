@@ -12,7 +12,7 @@ export function ContactMe() {
   });
   const [submitted, setSubmitted] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement | null>(null);
-  useAnimation(ref, "animate-drop-in");
+  useAnimation(ref, "animate-drop-in-delay");
 
   const { result, error, sendMessage } = useSendMessage({
     onSuccess: () => {
@@ -27,7 +27,7 @@ export function ContactMe() {
   });
 
   return (
-    <div ref={ref} className="contact-me-main opacity-0 delay-200">
+    <div ref={ref} className="contact-me-main opacity-0">
       <div className="contact-me-items">
         {submitted && (
           <Alert

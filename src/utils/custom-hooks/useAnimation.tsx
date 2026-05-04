@@ -10,7 +10,6 @@ export function useAnimation(
   useEffect(() => {
     if (isVisible && ref.current) {
       ref.current.classList.add(animation);
-      ref.current.style.opacity = "100%";
     }
   }, [isVisible, animation, ref]);
 }
