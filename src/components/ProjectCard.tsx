@@ -8,12 +8,12 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const ref = useRef<HTMLDivElement | null>(null);
-  useAnimation(ref, "animate-drop-in");
+  useAnimation(ref, "animate-drop-in-delay");
 
   return (
     <div
       ref={ref}
-      className="flex flex-col w-full sm:w-70 lg:w-100 h-full min-h-100 border border-gray-300 rounded-md shadow-md overflow-hidden hover:scale-103 duration-75 delay-200 opacity-0"
+      className="flex flex-col w-full sm:w-70 lg:w-100 h-full min-h-100 border border-gray-300 rounded-md shadow-md overflow-hidden hover:scale-103 duration-75 opacity-0"
     >
       <a
         className="flex flex-col h-full cursor-pointer"
