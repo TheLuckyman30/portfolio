@@ -15,7 +15,7 @@
     ],
     "siteLink": "https://selinabacaz.github.io/CapstoneDyslexease/",
     "githubLink": "https://github.com/selinAbacaz/CapstoneDyslexease",
-    "imagePath": "./images/test.png",
+    "imagePath": "./images/dyslexease.png",
     "featured": true
   },
   {
@@ -32,7 +32,7 @@
       "PostgreSQL"
     ],
     "siteLink": "https://f25-cisc474-red.bnauta0.workers.dev/",
-    "githubLink": "",
+    "githubLink": "https://github.com/TheLuckyman30/goldfish-brain",
     "imagePath": "./images/goldfish-brain.png",
     "featured": true
   },
@@ -71,9 +71,9 @@
     "shortDesc": "My PL is a React and TypeScript web application that simulates a full 2024/25 Premier League season. Users can simulate all matches in the season using a built-in match simulation algorithm and scheduling system, with results updating the league table dynamically. The project focuses on recreating league progression through full-season simulation.",
     "longDesc": "My PL is a frontend web application built using React and TypeScript that simulates a full Premier League season (2024/25). The application allows users to simulate every match in the season and observe how the league table evolves based on generated results. It includes a match scheduling system that creates the full fixture list for the season and a match simulation algorithm that determines match outcomes. As matches are simulated, the league table updates dynamically to reflect results across the season. The project is intentionally lightweight and focuses on core simulation logic, scheduling systems, and state-driven UI updates rather than backend infrastructure, serving as an exploration of sports simulation and data-driven UI design.",
     "techUsed": ["React", "TypeScript"],
-    "siteLink": "",
+    "siteLink": "https://theluckyman30.github.io/My-PL/",
     "githubLink": "https://github.com/TheLuckyman30/My-PL",
-    "imagePath": "./images/test.png",
+    "imagePath": "./images/my-pl.png",
     "featured": false
   }
 ]
