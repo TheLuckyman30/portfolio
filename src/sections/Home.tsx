@@ -56,7 +56,7 @@ export function Home({ scrollToContact }: HomeProps) {
               <div className="w-fit">
                 <Button>
                   <a href={resume} download="bnauta-resume">
-                    Resume
+                    Download My Resume
                   </a>
                 </Button>
               </div>
