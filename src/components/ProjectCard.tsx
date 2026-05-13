@@ -43,7 +43,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <a
               href={project.githubLink}
               target="_blank"
-              className="hover:scale-105 duration-75"
+              className="hover:scale-115 duration-75"
             >
               {findIcon("github", "lg")}
             </a>
