@@ -20,9 +20,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
         href={project.siteLink}
         target="_blank"
       >
-        <div
-          className="w-full h-40 bg-cover"
-          style={{ backgroundImage: `url(${project.imagePath})` }}
+        <img
+          className="w-full h-40"
+          src={project.imagePath}
+          alt={project.alt}
         />
         <div className="p-2 text-xl text-gray-700">{project.name}</div>
         <div className="p-2 px-5 grow text-sm">{project.shortDesc}</div>
