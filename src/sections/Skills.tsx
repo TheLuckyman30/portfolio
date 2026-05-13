@@ -44,6 +44,8 @@ const skillsCategories: SkillCategory[] = [
 ];
 
 export function Skills() {
+  const amountToRender = 5;
+  const render: number[] = new Array(amountToRender).fill(0);
   const renderSkill = (skill: string) => {
     return (
       <div className="flex flex-col items-center">
@@ -55,43 +57,26 @@ export function Skills() {
 
   return (
     <div className="flex flex-col gap-1 w-full overflow-hidden">
-      {skillsCategories.map((category, index) => {
+      {skillsCategories.map((category, i) => {
         const animationClass =
-          index % 2 === 0 ? "animate-slide-left" : "animate-slide-right";
-        const paddingClass = index % 2 === 0 ? "pr-1" : "pl-1";
-        const sharedClasses = `flex gap-1 ${animationClass} ${paddingClass}`;
+          i % 2 === 0 ? "animate-slide-left" : "animate-slide-right";
+        const paddingClass = i % 2 === 0 ? "pr-1" : "pl-1";
 
         return (
           <div className="flex" key={category.name}>
-            <div className={sharedClasses}>
-              {category.skills.map((skill) => (
-                <Chip key={skill}>{renderSkill(skill)}</Chip>
-              ))}
-            </div>
+            {render.map((_, j) => {
+              const extraClass = j !== amountToRender - 1 ? paddingClass : "";
 
-            <div className={sharedClasses}>
-              {category.skills.map((skill) => (
-                <Chip key={skill}>{renderSkill(skill)}</Chip>
-              ))}
-            </div>
-
-            <div className={sharedClasses}>
-              {category.skills.map((skill) => (
-                <Chip key={skill}>{renderSkill(skill)}</Chip>
-              ))}
-            </div>
-
-            <div className={sharedClasses}>
-              {category.skills.map((skill) => (
-                <Chip key={skill}>{renderSkill(skill)}</Chip>
-              ))}
-            </div>
-
-            <div className={`flex gap-1 ${animationClass}`}>
-              {category.skills.map((skill) => (
-                <Chip key={skill}>{renderSkill(skill)}</Chip>
-              ))}
-            </div>
+              return (
+                <div className={`flex gap-1 ${animationClass} ${extraClass}`}>
+                  {category.skills.map((skill) => (
+                    <div className="hover:scale-105 duration-75">
+                      <Chip key={skill}>{renderSkill(skill)}</Chip>
+                    </div>
+                  ))}
+                </div>
+              );
+            })}
           </div>
         );
       })}

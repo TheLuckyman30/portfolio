@@ -16,7 +16,3 @@
   whitespace-nowrap 
   duration-75;
 }
-
-.chip:hover {
-  @apply scale-110;
-}

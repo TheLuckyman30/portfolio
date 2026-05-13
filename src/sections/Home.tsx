@@ -38,10 +38,7 @@ export function Home({ scrollToContact }: HomeProps) {
           </p>
         </div>
         <div className="home-side-box animate-slide-in">
-          <div
-            className="home-image"
-            style={{ backgroundImage: `url(${picOfMe})` }}
-          />
+          <img src={picOfMe} className="home-image" alt="Me, Brandon Nauta" />
           <div>
             <p className="home-name">
               <span>Brandon</span> <span className="text-blue-700">Nauta</span>
@@ -59,7 +56,7 @@ export function Home({ scrollToContact }: HomeProps) {
               <div className="w-fit">
                 <Button>
                   <a href={resume} download="bnauta-resume">
-                    Resume
+                    Download My Resume
                   </a>
                 </Button>
               </div>

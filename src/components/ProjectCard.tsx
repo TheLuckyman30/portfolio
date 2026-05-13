@@ -20,9 +20,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
         href={project.siteLink}
         target="_blank"
       >
-        <div
-          className="w-full h-40 bg-cover"
-          style={{ backgroundImage: `url(${project.imagePath})` }}
+        <img
+          className="w-full h-40"
+          src={project.imagePath}
+          alt={project.alt}
         />
         <div className="p-2 text-xl text-gray-700">{project.name}</div>
         <div className="p-2 px-5 grow text-sm">{project.shortDesc}</div>
@@ -43,7 +44,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <a
               href={project.githubLink}
               target="_blank"
-              className="hover:scale-105 duration-75"
+              className="hover:scale-115 duration-75"
             >
               {findIcon("github", "lg")}
             </a>

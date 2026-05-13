@@ -6,5 +6,6 @@ export interface MyProject {
   siteLink: string;
   githubLink: string;
   imagePath: string;
+  alt: string;
   featured: boolean;
 }

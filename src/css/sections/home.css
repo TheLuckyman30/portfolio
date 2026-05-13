@@ -83,6 +83,7 @@
 
 .home-buttons {
   @apply flex
+  flex-wrap
   gap-2;
 }
 
